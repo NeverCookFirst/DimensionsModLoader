@@ -1,0 +1,7 @@
+{
+  "name": "Super Sonic Infinite",
+  "author": "NeverCookFirst",
+  "version": "1.0",
+  "platform": "ps3",
+  "description": "Infinite Super Sonic: removes the stud/ring spirit meter from Sonic's Super transform (jump + alternate action), so the form never runs out. Patches the transform abilities inside DLC16.DAT (Sonic Level Pack must be installed). Use Restore Vanilla to undo."
+}

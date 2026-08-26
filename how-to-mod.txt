@@ -1,0 +1,103 @@
+================================================================
+ HOW TO MAKE MODS for LEGO Dimensions (RPCS3) — Dimensions Mod Loader
+================================================================
+
+A mod is just a folder inside your mods directory:
+
+  mods\
+    MyCoolMod\
+      mod.json          <- metadata (required)
+      datfiles\         <- files injected INTO the game's .DAT archives
+      files\            <- loose files copied into the game folder as-is
+
+----------------------------------------------------------------
+1. mod.json
+----------------------------------------------------------------
+
+  {
+    "name": "My Cool Mod",
+    "author": "you",
+    "version": "1.0",
+    "platform": "ps3",
+    "description": "What it does and anything the user should know."
+  }
+
+"platform" is "ps3" (or "any"). The loader only lists mods matching the
+platform.
+
+----------------------------------------------------------------
+2. datfiles\ — archive injection
+----------------------------------------------------------------
+
+The first folder level under datfiles\ names the TARGET ARCHIVE, the rest is
+the file's INTERNAL PATH inside that archive:
+
+  datfiles\PATCH\STUFF\TEXT\TEXT.CSV
+     -> injected into PATCH.DAT as STUFF\TEXT\TEXT.CSV
+
+  datfiles\DLC16\additionalcontent\...\transform~.abilities
+     -> injected into DLC16.DAT
+
+The archive (PATCH.DAT, DLC16.DAT, ...) must exist in the game folder the
+user selected (normally ...\dev_hdd0\game\BLES02105\USRDIR).
+
+THE GOLDEN RULE: your file must be THE SAME SIZE OR SMALLER than the
+original file inside the archive. Same size is safest. If your edit makes a
+text file longer, win the bytes back elsewhere — trim comment lines, shorten
+a separator, pad another value. If it is shorter, that is fine too (the
+loader updates the entry's size fields; the data offset never moves).
+
+Why: the game's streaming engine assumes archive entries stay sorted by
+offset. Rewriting data in place keeps the archive layout 100% intact.
+
+----------------------------------------------------------------
+3. Getting the original files to edit
+----------------------------------------------------------------
+
+Use QuickBMS with the ttgames.bms script (community tools, easy to find) to
+extract files from PATCH.HDR/PATCH.DAT. Note for the update/DLC archives
+(".CC40TAD" format): tools that map files by name order can extract the
+WRONG data for some entries — the CRC table is the real index. If an
+extracted "text" file looks like binary garbage, you hit that bug; the file
+you want lives elsewhere in the archive.
+
+Useful facts:
+- The update's PATCH.DAT OVERRIDES the disc's GAME*.DAT — edit the PATCH
+  copy of a file, not the disc copy, or your change will be invisible.
+- Game text lives in PATCH.DAT: STUFF\TEXT\TEXT.CSV (one big CSV, columns
+  per language, quoted values).
+- Boot splash timings: PATCH.DAT: GUI\SPLASH.TXT (plain text).
+- Character abilities: abilities\... and per-character charcache\...
+  IMPORTANT: for ability parameters the engine loads the COMBINED registry
+  file of a folder (e.g. "transform~.abilities"), not only the individual
+  "transform~something.ability" files — patch the combined file too, or your
+  change will not take effect.
+
+----------------------------------------------------------------
+4. files\ — loose files
+----------------------------------------------------------------
+
+Everything under files\ is copied into the game folder with the same
+relative path. Existing files are backed up first. Use this for things that
+live outside the archives.
+
+----------------------------------------------------------------
+5. Conflicts, order, restore
+----------------------------------------------------------------
+
+- If two enabled mods change the same file, the mod LOWER in the list wins.
+- Apply always starts from vanilla state internally, so re-applying with a
+  different selection is always correct.
+- Restore Vanilla puts every original byte back (backups live in
+  .vanilla_backup\ inside the game folder — do not delete it while mods are
+  applied).
+
+----------------------------------------------------------------
+6. Testing tips
+----------------------------------------------------------------
+
+- Close RPCS3 before Apply/Restore.
+- Test one change at a time; the title-screen text (PRESS_START_TITLES row
+  in TEXT.CSV) is a great "is my pipeline working" probe.
+- If the game crashes at boot after your mod: Restore Vanilla, then check
+  your file sizes — a larger-than-original file is the usual culprit.

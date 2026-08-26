@@ -1,0 +1,7 @@
+{
+  "name": "RPCS3 Text Test",
+  "author": "NeverCookFirst",
+  "version": "2.0",
+  "platform": "ps3",
+  "description": "Proof-of-concept DAT injection: replaces the title-screen 'Press START button' prompt with 'MODS WORK ON RPCS3!'. Injects STUFF\\TEXT\\TEXT.CSV into PATCH.DAT (the update's copy overrides the disc). Point the Game folder at RPCS3's dev_hdd0\\game\\BLES02105\\USRDIR. Use Restore Vanilla to undo."
+}

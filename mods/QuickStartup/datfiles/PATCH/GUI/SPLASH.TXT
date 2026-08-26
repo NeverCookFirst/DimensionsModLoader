@@ -1,0 +1,93 @@
+; doesn't need extension - e.g. _nxg.tex
+
+; START LINE WITH:
+; Begin End If Set
+
+; EXAMPLES
+; Begin screen LEGALS
+; End screen LEGALS
+; If BLAH is BLAH and BLAH is BLAH Then Set BLAH to BLAH + BLAH
+; Set BLAH to BLAH + BLAH
+
+; CONDITIONS
+; the platform is WiiU
+; the console language is FRENCH (the console language will be American, Mexican, French_Canadian, French, Spanish, English, German... with underscores instead of spaces.
+; the console region is EUROPE
+; the console country is a non-PEGI country
+; the data source is HDD
+
+; SPECIAL VALUES
+; the empty string
+; the platform
+; the console language
+; the console region
+; the data source
+
+; RESULT
+; Set FILENAME to "screen"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+BeginSequence Boot
+	Screen Legal FadeTime 0.1 PauseTime 0.1 BlankTime 0.1
+	Screen IPHolders FadeTime 0.1 PauseTime 0.1 BlankTime 0.1
+	Screen Loading FadeTime 0.1 PauseTime 0.1 BlankTime 0.1
+EndSequence
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Begin screen Loading
+	Set FILENAME to "GUI\Legal\Loading_Splash"
+End screen Loading
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Begin screen IPHolders
+	Set FILENAME to "Gui/legal/LEGALS_IPHOLDERS"
+End screen Loading
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Begin screen Legal
+     
+   Set LANGUAGE to English
+   If the console language is French and the console region is Europe then Set LANGUAGE to French
+   
+   Set SUFFIX to the empty string
+   ;If the platform is ps3 and the data source is HDD then Set SUFFIX to "_dolby"
+   ;If the platform is mac then Set SUFFIX to "_mac"
+   
+   Set FILENAME to "GUI\Legal\LEGAL_" + LANGUAGE + SUFFIX
+   
+End screen Legal
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Begin screen Advert
+
+   Set LANGUAGE to the console language
+   Set FILENAME to "GUI\Textures\Demo\DemoSplash_" + LANGUAGE
+   
+End screen Advert
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Begin screen Ratings
+
+  set FILENAME to the empty string
+
+End screen Ratings
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Begin screen Controller given CONTROLLER_TYPE
+
+   Set FOLDER_NAME to the platform
+   Set CONTROLLER_NAME to the platform
+   
+   If the platform is wiiu and CONTROLLER_TYPE is gamepad then set CONTROLLER_NAME to WIIU_PRO
+   If the platform is wiiu and CONTROLLER_TYPE is wiimote then set CONTROLLER_NAME to WII
+   
+   Set FILENAME to "GUI\textures\" + FOLDER_NAME + "\controller_" + CONTROLLER_NAME + "_BACKGROUND"
+
+End screen Controller

@@ -1,0 +1,7 @@
+{
+  "name": "Quick Startup",
+  "author": "NeverCookFirst",
+  "version": "2.0",
+  "platform": "ps3",
+  "description": "Skips the boot splash screens (Legal / IPHolders / Loading) by cutting their display times from ~9s each to 0.1s. Injects GUI\\SPLASH.TXT into PATCH.DAT. Point the Game folder at RPCS3's dev_hdd0\\game\\BLES02105\\USRDIR. Use Restore Vanilla to undo."
+}
