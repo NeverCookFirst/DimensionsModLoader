@@ -1,9 +1,11 @@
-# Dimensions Mod Loader (RPCS3)
+<h1 align="center">Dimensions Mod Loader (RPCS3)</h1>
 
 A mod manager for **LEGO Dimensions** running on the **RPCS3** emulator
 (PS3, `BLES02105` / `BLUS31473`). It injects modified files directly into the
 game's TT Games `.DAT` archives **in place** — no repacking, no growing
 archives, and everything is reversible with one click.
+
+Thanks [LEGO Dimensions Discord](https://discord.gg/PuXpBMFE4P) for support!
 
 ## Features
 
