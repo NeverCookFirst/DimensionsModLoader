@@ -1,0 +1,7 @@
+{
+  "name": "Recomp Text Test",
+  "author": "NeverCookFirst",
+  "version": "1.0",
+  "platform": "any",
+  "description": "Proof-of-concept DAT injection for the ReXGlue recompilation: replaces the title-screen 'Press START button' prompt with 'MODS WORK ON RECOMP!'. Injects STUFF\\TEXT\\TEXT.CSV into PATCH.DAT (the update's copy overrides the disc). Point the Game folder at the recomp's update folder, where PATCH.DAT lives. The RPCS3 counterpart is a separate mod, RPCS3_TextTest, so the two phrases never collide."
+}
