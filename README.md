@@ -104,6 +104,15 @@ trailing newlines or comment characters to hit the exact size.
   (QuickBMS `ttgames.bms` by aluigi/linterniGamer, DATManager by connorh315).
 - Not affiliated with TT Games, WB Games or LEGO. Bring your own game copy.
 
+## Related
+
+- [Dimensions Recompiled](https://github.com/NeverCookFirst/DimensionsRecomp) - native PC build of the game, made by static recompilation.
+  It ships this tool as `tools\modcli` and drives it from an in-game mods menu.
+- [Xenia-Seamless-Toypad-Build](https://github.com/NeverCookFirst/Xenia-Seamless-Toypad-Build)
+- [RPCS3-Seamless-Toypad-Build](https://github.com/NeverCookFirst/RPCS3-Seamless-Toypad-Build)
+- [shadPS4-Seamless-Toypad-Bridge](https://github.com/NeverCookFirst/shadPS4-Seamless-Toypad-Bridge)
+- [DimensionsSaveConverter](https://github.com/NeverCookFirst/DimensionsSaveConverter)
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
