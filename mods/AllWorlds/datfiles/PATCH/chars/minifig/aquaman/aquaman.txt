@@ -1,0 +1,71 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Aquaman"
+name AQUAMAN
+moving_icon_start
+action "Staff_Idle"
+moving_icon_end
+hit_points=1
+Ability "Aquaman_Targeting"
+Ability "DC_HudOverride"
+Ability "AquamanShockwave"
+Ability "AquamanFireExtinguisher"
+Ability "AquamanDiving"
+Ability "AquamanConstruct"
+Ability "AquamanCreatures"
+Ability "AudioReactionDataAQUAMAN"
+Ability "Aquaman_Selectionring"
+Ability "MechTargetingFillSwitch"
+bolt_type "AquamanBolt"
+Ability "PunchEffect_AquaMan"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "CanUpgradeAquamanBoat"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_AQUAMAN");
+ability "AquamanSpawnAudio"
+Ability "CharacterWaveReleased"
+Ability "AquamanJakeSuitCamera"
+clear_default_items
+default_item "AquamanTrident" always_got held
+sfx_Hurt "VO_Aquaman_Pain"
+sfx_Die "VO_Aquaman_Death"
+sfx_Doomed "VO_Aquaman_Death"
+vfxlevel_override "VFX_Aquaman"
+resource_start=#GSC
+tag=#STREAKS_SCENE
+path='Levels\VFX\VFX_Chars\VFX_Aquaman\VFX_Aquaman.GSC'
+resource_end
+StreakData
+Life 0.2
+WidthScale 1
+MaterialSpecial "Aquaman_Streaks_Ob1"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

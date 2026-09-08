@@ -1,0 +1,71 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Benny"
+name BENNY
+moving_icon_start
+action "Gun_Idle"
+cameraOffset y 0.0025
+moving_icon_end
+hit_points=1
+Ability Movie_HudOverride
+Ability "CanUseBennyHacking"
+Ability "Glide"
+Ability "Benny_Selectionring"
+Ability "ProjectZeusUseMasterBuildIts"
+Ability "BennyTargeting"
+Ability "FromLEGOMovie"
+Ability "FromDC"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeBennysSpaceship"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataBenny"
+Ability "ImpliedAllowTriggeredIfHitByGun"
+Ability "ContentUnlock" (WorldName=#HUBW_LegoMovie,WorldHint="HINT_BENNY");
+Ability "CanNotUseUnderWaterBennyHack"
+Ability "TechnoAccessAbility"
+Ability "CanNotUseUnderWaterBennyHack"
+Ability "CharacterWaveReleased"
+Ability "UseLegoMovieRideAnims"
+ability "BennySpawnAudio"
+Ability "PreventUnderwaterInteractions"
+StreakData
+Life 0.6
+WidthScale 0.5
+MaterialSpecial "Streak_Default"
+Colour 0 0 255 150
+EndStreakData
+clear_default_items
+default_item "BennysRaygun" always_got held
+combat_roll off
+sfx_Hurt "BENNY_PAINSMALL"
+sfx_Die "BENNY_DEATH"
+sfx_Doomed "BENNY_DEATH"
+vfxlevel_override "VFX_Benny"
+vfxlevel_override "VFX_PunchEffects" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

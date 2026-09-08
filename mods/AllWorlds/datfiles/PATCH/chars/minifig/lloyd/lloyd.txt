@@ -1,0 +1,76 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Lloyd"
+name LLOYD
+moving_icon_start
+action "dualSwords_Idle"
+cameraOffset y 0.0025
+moving_icon_end
+jump_speed=3
+air_gravity=-6
+hit_points=1
+tiptoe_speed=0.1871
+run_speed=2.2
+sprint_speed=2.6
+Ability "ImmuneToLightningElectricity"
+Ability "ImmuneToIce"
+Ability "ImmuneToFire"
+Ability "CharacterWaveReleased"
+Ability "WuTargeting"
+Ability "Ninjago_HudOverride"
+Ability "AcrobatCharacterAbility"
+Ability "Lloyd_Selectionring"
+Ability "SpinjitsuWarrior"
+Ability "GoldSpinjitsuWarrior"
+Ability "Dodge"
+Ability "SenseiWuInvisibility"
+Ability "LloydIllumination"
+Ability "AttackStreaks_Lloyd"
+Ability "LloydShockwave"
+Ability "LloydDeflect"
+Ability "SpellItFastBuild"
+Ability "FromNinjago"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeNinjagoGoldDragon"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataLloyd"
+ability "LloydSpawnAudio"
+Ability "ContentUnlock" (WorldName=#HUBW_Ninjago,WorldHint="HINT_LLOYD");
+Ability "PreventUnderwaterInteractions"
+clear_default_items
+default_item "LloydSword" always_got held
+default_item "LloydSword" always_got held
+sfx_Hurt "VO_Lloyd_Pain"
+sfx_Die "VO_Lloyd_Death"
+sfx_Doomed "VO_Lloyd_Death"
+sfx_punch_hit "Wpn_SwordHit"
+vfxlevel_override "VFX_Lloyd"
+vfxlevel_override "VFX_Ninjagoshared" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

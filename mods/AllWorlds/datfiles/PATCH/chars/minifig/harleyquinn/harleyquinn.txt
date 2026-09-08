@@ -1,0 +1,77 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+tiptoe_speed=0.2586
+walk_speed=0.5172
+icon_override "HarleyQuinn"
+name HARLEYQUINN
+hit_points=1
+moving_icon_start
+action "Idle_Icon"
+moving_icon_end
+Ability "HarleyTargeting"
+Ability "DC_HudOverride"
+Ability "AcrobatCharacterAbility"
+Ability "Harley_Selectionring"
+Ability "InteractWithCrackedLegoDefault"
+Ability "Harley_Selectionring"
+Ability "AllowDisguise"
+Ability "CanUpgradeHarleyMonsterTruck"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+ability "DefaultSpinAttackAbility"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataHARLEYQUINN"
+ability "HarleyQuinnSpawnAudio"
+Ability "HarleyGodRaysCallOut"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_HARLEYQUINN");
+Ability "PreventUnderwaterInteractions"
+Ability "CharacterWaveReleased"
+Ability "WalkOnTightRope"
+Ability "Wall_Jump"
+Ability "Twirl"
+Ability "Harley_Lunge_Shockewave"
+Ability "Backflip"
+clear_default_items
+default_item HarleyQuinnHammer always_got held
+sfx_Hurt "VO_HarleyQuinn__Pain_Group"
+sfx_Die "VO_HarleyQuinn_Death"
+sfx_Doomed "VO_HarleyQuinn_Death"
+vfxlevel_override "VFX_HarleyQuinn"
+vfxlevel_override "VFX_FlashPunchEffect" EXTRA_SLOT1
+resource_start=#GSC
+tag=#STREAKS_SCENE
+path='Levels\VFX\VFX_Chars\VFX_HarleyQuinn\VFX_HarleyQinn.GSC'
+resource_end
+StreakData
+Life 0.4
+WidthScale 2
+MaterialSpecial "Harley_streak1"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

@@ -1,0 +1,82 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Cyberman"
+name CYBERMAN
+moving_icon_start
+action "idle"
+moving_icon_end
+hit_points=1
+bolt_type "CybermanBolt"
+Ability "DefaultShooting"
+firerate=2.0
+can_fire
+Ability "CybermanTargeting"
+Ability "Cyberman_HudOverride"
+Ability "Cyberman_Selectionring"
+Ability "MetalSuit_MiniFig"
+Ability "GhostPhobiaImmuneAbility"
+Ability "DefaultMindControl"
+Ability "PunchEffect_CyberMan"
+Ability "CyberManShockwave"
+Ability "AllowDisguise"
+Ability "CanUseCybermanRift"
+Ability "CanUseBennyHacking"
+Ability "AquamanDiving"
+Ability "CybermanMindControl"
+Ability "TechnoAccessAbility"
+Ability "CyberMatDrone"
+Ability "CybermanXRay"
+Ability "FromDrWho"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeDalek"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataCyberman"
+Ability "ContentUnlock" (WorldName=#HUBW_DoctorWho,WorldHint="HINT_CYBERMAN");
+Ability "ImpliedInteractWithLegoSilver"
+Ability "HurtByGoldLEGO"
+ability "CybermanSpawnAudio"
+Ability "ShowDLCMessageDrWho"
+Ability "NoColdBreathAbility"
+clear_default_items
+sfx_Hurt "VO_Cyberman_Pain"
+sfx_Die "VO_Cyberman_Death"
+sfx_Doomed "VO_Cyberman_Death"
+vfxlevel_override "VFX_Cyberman"
+resource_start=#GSC
+tag=#STREAKS_SCENE
+path='Levels\VFX\VFX_Gen\VFX_Gen.GSC'
+resource_end
+StreakData
+Life 0.4
+WidthScale 0.5
+colour 127 127 127 050
+MaterialSpecial "Streak_Default1"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

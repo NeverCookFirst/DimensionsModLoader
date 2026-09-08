@@ -1,0 +1,71 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "BadCop"
+name BADCOP
+moving_icon_start
+cameraOffset x -0.0 y 0.0 z 0.03
+action "Gun_Idle"
+moving_icon_end
+baddie
+hit_points=1
+Ability Movie_HudOverride
+ability "BadCopSuperSense"
+Ability "Badcop_Selectionring"
+Ability "Badcop_Targeting"
+Ability "FromLEGOMovie"
+Ability "FromDC"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "AllowDisguise"
+Ability "CanUpgradeBadCopCar"
+Ability "StandardCharacterTag"
+Ability "ImpliedAllowTriggeredIfHitByGun"
+Ability "AudioReactionDataBadCop"
+Ability "ContentUnlock" (WorldName=#HUBW_LegoMovie,WorldHint="HINT_BADCOP");
+Ability "CanRideRidable_LegoMovieCharacters"
+Ability "BadCopLaserVision"
+Ability "ImpliedAllowTriggeredIfHitByGun"
+ability "BadCopSpawnAudio"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+Ability "ImpliedInteractWithIce"
+Ability "UseLegoMovieRideAnims"
+StreakData
+Life 0.6
+WidthScale 0.5
+MaterialSpecial "Streak_Black"
+Colour 100 100 100 100
+EndStreakData
+clear_default_items
+default_item "BadCopStudGun" always_got held
+sfx_Hurt "VO_GenMale1_Pain"
+sfx_Die "VO_GenMale1_Death"
+sfx_Doomed "VO_GenMale1_Death"
+vfxlevel_override "VFX_BadCop"
+vfxlevel_override "VFX_PunchEffects" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

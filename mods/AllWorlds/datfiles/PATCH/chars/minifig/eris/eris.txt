@@ -1,0 +1,77 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Eris"
+name ERIS
+moving_icon_start
+cameraOffset x -0.0 y -0.07 z 0.0
+action "idle_icon"
+moving_icon_end
+baddie
+hit_points=1
+Ability "ErisTargeting"
+Ability "CHIMA_HudOverride"
+Ability "GenericFlying"
+Ability "Eris_Selectionring"
+Ability "Chi"
+Ability "ErisChiTransform"
+Ability "FromChima"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeErisEagleJet"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataERIS"
+Ability "ContentUnlock" (WorldName=#HUBW_Chima,WorldHint="HINT_ERIS");
+Ability "ImpliedAllowTriggeredIfHitByGun"
+Ability "DefLungeShockwaveOffset"
+ability "ErisSpawnAudio"
+Ability "ErisGodRaysCallOut"
+Ability "DefaultGroundCrackAttack"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+Ability "ErisJakeSuitCamera"
+Ability "ErisAiHack"
+clear_default_items
+default_item "Eris_Axe" always_got held
+default_item "Eris_Crossbow" always_got away
+StreakData
+Life 0.3
+WidthScale 0.5
+MaterialSpecial "Streak_Default"
+Colour 255 255 255 200
+VfxType "VFX_CombatSpang_White"
+EndStreakData
+sfx_Hurt "VO_Eris_PainSmall"
+sfx_Die "VO_Eris_Death"
+sfx_Doomed "VO_Eris_Death"
+sfx_punch_hit "Wpn_AxeHit"
+vfxlevel_override "VFX_ChiShared"
+vfxlevel_override "VFX_PunchEffects" EXTRA_SLOT1
+vfxlevel_override "VFX_Eris" EXTRA_SLOT2
+vfxlevel_override "VFX_DefaultGroundCracks" EXTRA_SLOT3
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

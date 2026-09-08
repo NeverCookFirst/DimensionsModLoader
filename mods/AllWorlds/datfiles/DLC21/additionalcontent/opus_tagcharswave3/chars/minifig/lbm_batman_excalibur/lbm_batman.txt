@@ -1,0 +1,70 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "Grapples"
+Ability "Glide"
+Ability "LBM_Batman_Targeting"
+Ability "BatgirlDetectiveMode"
+Ability "FirstTryBatarang"
+Ability "CanUpgradeLBM_Veh"
+Ability "BatmanInvisibility"
+Ability "ProjectZeusUseMasterBuildIts"
+Ability "AudioReactionDataLBM_Batman"
+Ability "LBM_HudOverride"
+Ability "DefLungeShockwave"
+Ability "SwingAttach"
+Ability "Batman_Selectionring"
+Ability "Dash_Attack"
+Ability "CanUseLegoBatmanContextSwitch"
+Ability "UseLegoMovieRideAnims"
+Ability "PunchEffect_LBM_Batman"
+Ability "CanInteractWithBatarangSlot"
+Ability "ShowCowlOnSkeletonAbility"
+clear_default_items
+default_item "BatarangItem" always_got away
+default_item "batGrapple_LBM" always_got away
+default_item "FirstTryBatarang_LeftItem" always_got away
+default_item "FirstTryBatarang_RightItem" always_got away
+default_item "LBM_BatmanMerchGun" always_got away
+can_grapple
+grapple_gun_locator=1
+has_whip tex="7_LEGOBlackRope3D"
+sfx_Hurt "Vo_LBM_Batman_Pain"
+sfx_Die "Vo_LBM_Batman_Death"
+sfx_Doomed "Vo_LBM_Batman_Death"
+vfxlevel_override "VFX_LB_Batman"
+vfxlevel_override "VFX_PunchEffects" EXTRA_SLOT1
+moving_icon_start
+cameraOffset x 0 y -0.025 z -0.03 ry 10
+action "Icon_idle"
+moving_icon_end
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

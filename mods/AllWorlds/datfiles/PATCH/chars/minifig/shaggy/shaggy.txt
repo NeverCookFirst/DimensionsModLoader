@@ -1,0 +1,65 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Shaggy"
+name SHAGGY
+hit_points=1
+Tiptoe_Speed=0.1861
+run_speed=1.5
+sprint_speed=2.2
+Ability "ShaggyTargeting"
+Ability "ZeusTrackingShaggy"
+Ability "Shaggy_Selectionring"
+Ability "FromScoobydoo"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeMysteryMachine"
+Ability "ScoobyGang_MiniFig"
+Ability "StandardCharacterTag"
+Ability "ShaggyInvisibility"
+Ability "SCOOBY_HudOverride"
+Ability "AudioReactionDataShaggy"
+Ability "ShaggyIllumination"
+Ability "Glide"
+ability "ShaggySpawnAudio"
+Ability "ContentUnlock" (WorldName=#HUBW_ScoobyDoo,WorldHint="HINT_SHAGGY");
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+clear_default_items
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 50 50 50 200
+VfxType "VFX_CombatSpang_White"
+EndStreakData
+sfx_Hurt "VO_Shaggy_Pain"
+sfx_Die "VO_Shaggy_Death"
+sfx_Doomed "VO_Shaggy_Death"
+vfxlevel_override "VFX_Shaggy"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

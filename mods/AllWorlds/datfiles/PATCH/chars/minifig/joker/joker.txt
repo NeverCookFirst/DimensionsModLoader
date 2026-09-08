@@ -1,0 +1,79 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Joker"
+name JOKER
+hit_points=1
+extra_char="GoonJokerTeeth"
+moving_icon_start
+action "Idle_Icon"
+ignore_cylinder
+moving_icon_end
+Ability "DC_HudOverride"
+Ability "JOKER_Targeting"
+Ability "Joker_Selectionring"
+Ability "Grapples"
+Ability "JokerElectricSwitchInteraction"
+Ability "JokerElectricCharge"
+Ability "JokerShockwave"
+Ability "ImmuneToToxicWithHint"
+Ability "JokerSummonDecoys"
+Ability "CanUpgradeJokerHelicopter"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataJOKER"
+Ability "PunchEffect_Joker"
+Ability "ImpliedAllowTriggeredIfHitByGun"
+Ability "AllowDisguise"
+Ability "CharacterWaveReleased"
+ability "JokerSpawnAudio"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_JOKER");
+Ability "PreventUnderwaterInteractions"
+clear_default_items
+default_item "JOKERFLAGGUN" always_got held
+default_item "batGrapple" always_got away
+can_grapple
+grapple_gun_locator=1
+has_whip tex="7_LEGOBlackRope3D"
+sfx_Hurt "VO_Joker_Combat_Pain"
+sfx_Die "VO_Joker_Death"
+sfx_Doomed "VO_Joker_Death"
+vfxlevel_override "VFX_Joker"
+vfxlevel_override "VFX_FlashPunchEffect" EXTRA_SLOT1
+resource_start=#GSC
+tag=#STREAKS_SCENE
+path='Levels\VFX\VFX_Chars\VFX_Joker\VFX_Joker.GSC'
+resource_end
+StreakData
+Life 0.5
+WidthScale 0.5
+MaterialSpecial "Attack_streak_ob1"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

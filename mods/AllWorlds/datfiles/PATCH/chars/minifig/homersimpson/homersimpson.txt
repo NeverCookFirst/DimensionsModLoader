@@ -1,0 +1,69 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "HomerSimpson"
+name HOMERSIMPSON
+tiptoe_speed=0.1781
+moving_icon_start
+cameraOffset y 0.001
+moving_icon_end
+Ability "HomerTargeting"
+Ability "Simpsons_HudOverride"
+Ability HomerSonarConeAttack
+Ability TransformToAngryHomer
+Ability "CanUpgradePinkCarAndHomerTV"
+Ability "FromSimpsons"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "DefLungeShockwave"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataHomerSimpson"
+Ability "CanRideRidable_HomerSimpson"
+Ability "CanUseLardLadSwitch"
+Ability "Homer_Selectionring"
+ability "HomerSpawnAudio"
+Ability "ApplyTransformedCharAbilityDuringTransform"
+Ability "ContentUnlock" (WorldName=#HUBW_Simpsons,StoryName=#LPSimpsons,WorldHint="HINT_HOMERSIMPSON",StoryHint="HINT_HOMERSIMPSON_LEVEL");
+Ability "ShowDLCMessageSimpsons"
+Ability "CanUseHomerChilliSwitch"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+Ability "HomerJakeSuitCamera"
+clear_default_items
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 252 255 0 150
+VfxType "VFX_CombatSpang_Yellow"
+EndStreakData
+sfx_Hurt "VO_Homer_Pain"
+sfx_Die "VO_Homer_Pain"
+sfx_Doomed "VO_Homer_Falling"
+vfxlevel_override "VFX_HomerSimpson"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

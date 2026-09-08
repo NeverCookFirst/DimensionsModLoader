@@ -1,4 +1,4 @@
-namespace DimensionsModManager;
+﻿namespace DimensionsModManager;
 
 /// <summary>
 /// Reader/injector for TT Games .DAT/.HDR archive pairs used by LEGO
@@ -56,8 +56,33 @@ public class DatArchive
     public DatArchive(string datPath)
     {
         DatPath = datPath;
-        HdrPath = Path.ChangeExtension(datPath, ".HDR");
+        HdrPath = HdrPathFor(datPath);
         Parse();
+    }
+
+    /// <summary>
+    /// The header that goes with a data file. Disc and update archives are
+    /// .DAT/.HDR; the DLC packages on Xbox 360 ship as .DAT2/.HDR2.
+    /// </summary>
+    public static string HdrPathFor(string datPath)
+    {
+        string ext = Path.GetExtension(datPath);
+        string hdrExt = ext.EndsWith("2", StringComparison.Ordinal) ? ".HDR2" : ".HDR";
+        return Path.ChangeExtension(datPath, hdrExt);
+    }
+
+    /// <summary>
+    /// Every internal path the name tree knows, with its entry index. Only
+    /// meaningful for the new format; the classic format has no tree here.
+    /// </summary>
+    public IEnumerable<KeyValuePair<string, int>> EnumerateNames()
+    {
+        if (!IsNewFormat)
+        {
+            return Array.Empty<KeyValuePair<string, int>>();
+        }
+        nameMap_ ??= BuildNameMap();
+        return nameMap_;
     }
 
     // --- endian helpers ---
@@ -492,6 +517,85 @@ public class DatArchive
         hdr_[e + 12] = 0;
         hdr_[e + 13] = 0;
         hdr_[e + 14] = 0;
+    }
+
+    /// <summary>
+    /// Adds a file the archive does not have yet: the bytes go on the end of the
+    /// .DAT and the header's file and CRC tables each grow by one entry. Returns
+    /// the new entry's index. Call SaveHdr afterwards.
+    ///
+    /// Replacing an entry is enough for most mods, but not for one that has to
+    /// bring something new - a character has only the abilities cached for it,
+    /// and no amount of overwriting adds a thirteenth.
+    ///
+    /// Lookup is a linear scan of the CRC table, so the table does not have to
+    /// stay ordered and the entry can simply go last. The name tree is left
+    /// alone: it is only this reader's fallback for entries whose CRC does not
+    /// match their path, and a path we chose ourselves always matches.
+    /// </summary>
+    public int AddEntry(string internalPath, byte[] data)
+    {
+        if (!IsNewFormat)
+        {
+            throw new NotSupportedException(
+                $"{Path.GetFileName(DatPath)}: adding files needs the new archive format.");
+        }
+        if (embeddedHdr_)
+        {
+            // SaveHdr puts an embedded header back into a fixed-size window in
+            // the .DAT; a header that grew would run into whatever follows it.
+            throw new NotSupportedException(
+                $"{Path.GetFileName(DatPath)}: this archive keeps its header inside the .DAT, "
+                + "which leaves no room to grow it.");
+        }
+        EnsureCrcWidth();
+        if (FindEntry(internalPath) >= 0)
+        {
+            throw new InvalidOperationException(
+                $"{internalPath} is already in {Path.GetFileName(DatPath)}; inject it instead.");
+        }
+
+        long offset;
+        using (var dat = new FileStream(DatPath, FileMode.Append, FileAccess.Write))
+        {
+            offset = dat.Position;
+            dat.Write(data, 0, data.Length);
+        }
+
+        int crcWidth = crc64_ ? 8 : 4;
+        long fileTableEnd = fileTableOffset_ + (long)FileCount * fileEntrySize_;
+        long crcTableEnd = crcTableOffset_ + (long)FileCount * crcWidth;
+
+        // Both tables are contiguous, so the new file entry is inserted where the
+        // CRC table starts and everything past it slides along. PATCH.DAT keeps
+        // data after the CRC table; it is carried over untouched.
+        var grown = new byte[hdr_.Length + fileEntrySize_ + crcWidth];
+        Array.Copy(hdr_, 0L, grown, 0L, fileTableEnd);
+        Array.Copy(hdr_, fileTableEnd, grown, fileTableEnd + fileEntrySize_, crcTableEnd - fileTableEnd);
+        Array.Copy(hdr_, crcTableEnd, grown, crcTableEnd + fileEntrySize_ + crcWidth,
+                   hdr_.Length - crcTableEnd);
+
+        int index = FileCount;
+        hdr_ = grown;
+        crcTableOffset_ += fileEntrySize_;
+        FileCount++;
+        WriteU32BE(20, (uint)FileCount);
+        // The name tree is followed by [s32 type][u32 fileCount]; that second
+        // copy of the count has to agree with the one in the header.
+        WriteU32BE(fileTableOffset_ - 4, (uint)FileCount);
+
+        WriteEntrySizes(index, offset, (uint)data.Length);
+        long c = crcTableOffset_ + (long)index * crcWidth;
+        if (crc64_)
+        {
+            WriteU64BE(c, PathCrc64(internalPath));
+        }
+        else
+        {
+            WriteU32BE(c, PathCrc32(internalPath));
+        }
+        nameMap_ = null;   // rebuilt on demand; it never knew about this entry
+        return index;
     }
 
     public void SaveHdr()

@@ -1,0 +1,71 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+tiptoe_speed=0.2016
+icon_override "Cragger"
+name CRAGGER
+moving_icon_start
+cameraOffset x 0.005 y -0.06 z -0.12 ry -15
+action "Idle_Icon"
+moving_icon_end
+baddie
+hit_points=1
+Ability "ErisTargeting"
+Ability "CraggerDiving"
+Ability "CHIMA_HudOverride"
+Ability "Cragger_Selectionring"
+Ability "ImmuneToToxicWithHint"
+Ability "Chi"
+Ability "CraggerChiTransform"
+Ability "FromChima"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeCraggerJetSki"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataCRAGGER"
+Ability "ContentUnlock" (WorldName=#HUBW_Chima,WorldHint="HINT_CRAGGER");
+ability "CraggerSpawnAudio"
+Ability "DefLungeShockwaveOffset"
+Ability "DefaultGroundCrackAttack"
+Ability "CharacterWaveReleased"
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 12 255 0 150
+VfxType "VFX_CombatSpang_Green"
+EndStreakData
+clear_default_items
+default_item "CraggerSword" always_got held
+sfx_Hurt "VO_Cragger_PainSmall"
+sfx_Die "VO_Cragger_Death"
+sfx_Doomed "VO_Cragger_Death"
+vfxlevel_override "VFX_ChiShared"
+vfxlevel_override "VFX_PunchEffects" EXTRA_SLOT1
+vfxlevel_override "VFX_DefaultGroundCracks" EXTRA_SLOT2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

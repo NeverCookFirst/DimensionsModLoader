@@ -1,0 +1,62 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Chell"
+name CHELL
+moving_icon_start
+cameraOffset x -0.0 y 0.0 z -0.01
+action "PortalGun_Idle"
+moving_icon_end
+hit_points=1
+Ability "AcrobatCharacterAbility"
+Ability "FromPortal"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradePortalTurretAndCube"
+Ability "StandardCharacterTag"
+Ability "ContentUnlock" (WorldName=#HUBW_ApertureScience,StoryName=#LPApertureScience,WorldHint="HINT_CHELL",StoryHint="HINT_CHELL_LEVEL");
+Ability "Chell_Selectionring"
+Ability "PoRTAL_HudOverride"
+ability "ChellSpawnAudio"
+Ability "ImpliedInteractPortalValveTarget"
+Ability "PreventInteractRavenPortalTarget"
+Ability "ChellTagItemCharrying"
+Ability "CanUseChellContextSwitch"
+Ability "ShowDLCMessagePortal"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 255 96 0 200
+EndStreakData
+clear_default_items
+default_item "PortalValveGun" always_got held
+vfxlevel_override "VFX_Chell"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

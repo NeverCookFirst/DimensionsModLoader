@@ -1,0 +1,64 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+tiptoe_speed=0.16
+icon_override "Test_Wildstyle"
+name TEST_WILDSTYLE
+moving_icon_start
+cameraOffset y 0.001
+moving_icon_end
+Ability "Movie_HudOverride"
+Ability "Wyldstyle_Targeting"
+Ability "DefLungeShockwave"
+ability "AcrobatCharacterAbility"
+ability "WyldeStyleSpawnAudio"
+ability "WildeStyleSuperSense"
+Ability "ProjectZeusUseMasterBuildIts"
+Ability "Wyldstyle_Selectionring"
+Ability "CanRideRidable_LegoMovieCharacters"
+Ability "FromLEGOMovie"
+Ability "FromDC"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataWildstyle"
+Ability "ContentUnlock" (WorldName=#HUBW_LegoMovie,WorldHint="HINT_WYLDSTYLE");
+Ability "PreventUnderwaterInteractions"
+Ability "UseLegoMovieRideAnims"
+StreakData
+Life 0.3
+WidthScale 0.02
+MaterialSpecial "Streak_Default"
+Colour 255 0 255 150
+VfxType "VFX_CombatSpang_Pink"
+EndStreakData
+clear_default_items
+sfx_Hurt "VO_GenFem1_Pain"
+sfx_Die "VO_GenFem1_Pain"
+sfx_Doomed "VO_GenFem1_Death"
+vfxlevel_override "VFX_Wildstyle"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

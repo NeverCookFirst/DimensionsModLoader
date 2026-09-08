@@ -1,4 +1,4 @@
-using System.Text.Json;
+﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace DimensionsModManager;
@@ -37,6 +37,13 @@ public class DatOriginalEntry
 
     [JsonPropertyName("datLength")]
     public long DatLength { get; set; }
+
+    /// <summary>
+    /// Where the archive actually is. Empty in state written before DLC
+    /// archives outside the game folder could be patched.
+    /// </summary>
+    [JsonPropertyName("datPath")]
+    public string DatPath { get; set; } = "";
 }
 
 public class AppliedState
@@ -113,7 +120,44 @@ public static class ModEngine
     /// If mods are already applied, restores vanilla first so re-applying
     /// with a different selection is always correct.
     /// </summary>
-    public static AppliedState ApplyMods(string gameDir, IReadOnlyList<ModInfo> mods)
+    /// <summary>
+    /// Finds the .DAT (or .DAT2) for an archive name. The game folder comes
+    /// first; then each search folder and its immediate subfolders, which is
+    /// how the Xbox 360 build keeps its DLC: one package folder per DLC under
+    /// the content root, holding DLCnn.DAT2/.HDR2.
+    /// </summary>
+    public static string? ResolveArchivePath(
+        string gameDir, string archive, IReadOnlyList<string>? searchDirs)
+    {
+        IEnumerable<string> Candidates(string dir)
+        {
+            yield return Path.Combine(dir, archive + ".DAT");
+            yield return Path.Combine(dir, archive + ".DAT2");
+        }
+        foreach (string c in Candidates(gameDir))
+        {
+            if (File.Exists(c)) return c;
+        }
+        foreach (string dir in searchDirs ?? Array.Empty<string>())
+        {
+            if (!Directory.Exists(dir)) continue;
+            foreach (string c in Candidates(dir))
+            {
+                if (File.Exists(c)) return c;
+            }
+            foreach (string sub in Directory.EnumerateDirectories(dir))
+            {
+                foreach (string c in Candidates(sub))
+                {
+                    if (File.Exists(c)) return c;
+                }
+            }
+        }
+        return null;
+    }
+
+    public static AppliedState ApplyMods(string gameDir, IReadOnlyList<ModInfo> mods,
+                                         IReadOnlyList<string>? archiveSearchDirs = null)
     {
         if (!Directory.Exists(gameDir))
         {
@@ -189,9 +233,17 @@ public static class ModEngine
         }
         foreach (var group in datMap.GroupBy(kv => kv.Key.archive))
         {
-            string datPath = Path.Combine(gameDir, group.Key + ".DAT");
-            if (!File.Exists(datPath))
+            string? datPath = ResolveArchivePath(gameDir, group.Key, archiveSearchDirs);
+            if (datPath == null)
             {
+                // A DLC the user does not own: the rest of the mod still applies.
+                // The update archive is different - without it nothing works.
+                if (group.Key.StartsWith("DLC", StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.Error.WriteLine(
+                        $"warning: {group.Key} not installed, skipping its {group.Count()} file(s)");
+                    continue;
+                }
                 throw new FileNotFoundException(
                     $"Archive {group.Key}.DAT not found in the game folder.");
             }
@@ -207,15 +259,28 @@ public static class ModEngine
             {
                 Archive = group.Key,
                 DatLength = new FileInfo(datPath).Length,
+                DatPath = Path.GetFullPath(datPath),
             });
             foreach (((_, string internalPath), (string sourceFile, string modName)) in group)
             {
                 int index = archive.FindEntry(internalPath);
                 if (index < 0)
                 {
-                    throw new InvalidDataException(
-                        $"{group.Key}.DAT has no file named {internalPath} " +
-                        $"(mod \"{modName}\").");
+                    // The archive has no such file, so the mod is bringing a new
+                    // one. Some mods cannot work any other way: a character is
+                    // built from the abilities cached for it, and adding one to
+                    // that cache is the only way to give it something it never
+                    // had. Restore puts the original .HDR back and trims the
+                    // .DAT, which takes the added entry with it.
+                    index = archive.AddEntry(internalPath, File.ReadAllBytes(sourceFile));
+                    state.DatPatches.Add(new DatPatchEntry
+                    {
+                        Archive = group.Key,
+                        InternalPath = internalPath,
+                        SourceMod = modName,
+                        EntryIndex = index,
+                    });
+                    continue;
                 }
                 // In-place injection overwrites vanilla bytes, so save the
                 // entry's original data once (keyed by archive + entry index).
@@ -279,8 +344,12 @@ public static class ModEngine
         foreach (DatOriginalEntry original in state.DatOriginals)
         {
             string hdrBackup = Path.Combine(backupDir, original.Archive + ".HDR");
-            string datPath = Path.Combine(gameDir, original.Archive + ".DAT");
-            string hdrPath = Path.ChangeExtension(datPath, ".HDR");
+            // Older state files only name the archive; those always lived in
+            // the game folder itself.
+            string datPath = !string.IsNullOrEmpty(original.DatPath)
+                ? original.DatPath
+                : Path.Combine(gameDir, original.Archive + ".DAT");
+            string hdrPath = DatArchive.HdrPathFor(datPath);
             if (File.Exists(hdrBackup))
             {
                 File.Copy(hdrBackup, hdrPath, overwrite: true);

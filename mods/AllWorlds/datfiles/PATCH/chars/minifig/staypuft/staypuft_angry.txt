@@ -1,0 +1,78 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+EndStreakData
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "StayPuft"
+name STAYPUFT_ANGRY
+Scale = 2.0
+hit_points=1
+no_tiptoe
+Walk_speed=0.7388
+Run_speed=2.4
+Sprint_speed=4.02
+moving_icon_start
+cameraOffset ry 10
+cameraOffset y 0.0025
+moving_icon_end
+Ability "TransformToStayPuftMinifig"
+Ability "ImmuneToToxicWithHint"
+Ability "PeterVenkmanTargeting"
+Ability "GHOSTBUSTERS_HudOverride"
+Ability "GhostPhobiaImmuneAbility"
+ability "CanUpgradeTerrorDog"
+Ability "StandardCharacterTag"
+Ability "TransformedCharacter"
+Ability "InteractWithCrackedLegoDefault"
+Ability "StayPuft_BigLunge_Shockewave"
+Ability "PunchEffect_SPBig"
+Ability "BigStayPuftStep"
+Ability "Staypuft_Selectionring"
+Ability "SuperStrengthSmashOnContact"
+Ability "Super_Strength"
+Ability "AudioReactionDataStayPuft"
+Ability "LargeScaledCharacter"
+Ability "BigFig"
+Ability "StayPuftGodRaysCallOut"
+Ability "CanUseLedges" suppress
+Ability "can_use_tightrope" suppress
+clear_default_items
+sfx_Hurt "VO_StayPuftAngry_Pain"
+sfx_Die "VO_StayPuftAngry_Death"
+sfx_Doomed "VO_StayPuftAngry_Death"
+vfxlevel_override "VFX_StayPuft"
+StreakData
+Life 0.5
+WidthScale 1.2
+colour 255 255 255 255
+MaterialSpecial "Stay_Puft_Beam1"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

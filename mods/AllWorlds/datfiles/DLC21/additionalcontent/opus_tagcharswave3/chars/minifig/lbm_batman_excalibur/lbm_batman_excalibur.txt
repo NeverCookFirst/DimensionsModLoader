@@ -1,0 +1,81 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+Ability "FromLegoBatman"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "ShowDLCMessageLEGOBatman"
+Ability "ContentUnlock" (WorldName=#HUBW_LEGOBatman,WorldHint="HINT_LBM_BATMAN_EXCALIBUR");
+Ability "BatmanInvisibility"
+Ability "DefLungeShockwave"
+Ability "LBM_Batman_Excalibur_Selectionring"
+Ability "Dash_Attack"
+Ability "LBM_HudOverride"
+Ability "ProjectZeusUseMasterBuildIts"
+Ability "UnlockBattleArena" (Checkpoint="LegoBatman_BA_1", UnlockedHint="HINT_LEGOBATMAN_BATTLEARENA_1_UNLOCKED", DLCRequiredHint="HINT_DLC_DOWNLOAD_REQUIRED")
+Ability "Grapples"
+Ability "LBM_Batman_Excalibur_Targeting"
+Ability "InteractWithCrackedLegoDefault"
+Ability "SwingAttach"
+Ability "CanUpgradeLBM_Beast"
+Ability "UseLegoMovieRideAnims"
+Ability "AudioReactionDataLBM_Batman_Excalibur"
+Ability "CanInteractWithBatarangSlot"
+Ability "BatmanExcaliburDeflect"
+Ability "ShowCowlOnSkeletonAbility"
+clear_default_items
+default_item "LBM_Batman_Excalibur" always_got
+default_item "batGrapple_Silver" always_got away
+default_item "BatarangItem_Silver" always_got away
+can_grapple
+grapple_gun_locator=1
+has_whip tex="7_LEGOBlackRope3D"
+sfx_Hurt "Vo_LBM_Batman_Pain"
+sfx_Die "Vo_LBM_Batman_Death"
+sfx_Doomed "Vo_LBM_Batman_Death""
+action_sfx Sword_Fight1 punch_hit_char Wpn_SwordHitChar
+action_sfx Sword_Fight2 punch_hit_char Wpn_SwordHitChar
+action_sfx Sword_Fight3 punch_hit_char Wpn_SwordHitChar
+action_sfx Sword_Fight4 punch_hit_char Wpn_SwordClash
+action_sfx Sword_Fight5 punch_hit_char Wpn_PunchHvy
+action_sfx Sword_Fight6 punch_hit_char Wpn_SwordHitChar
+action_sfx Sword_LungeLand punch_hit_char Wpn_SwordSlam
+action_sfx Sword_Fight1 punch_hit_blowup Wpn_SwordHit
+action_sfx Sword_Fight2 punch_hit_blowup Wpn_SwordHit
+action_sfx Sword_Fight3 punch_hit_blowup Wpn_SwordHit
+action_sfx Sword_Fight4 punch_hit_blowup Wpn_SwordClash
+action_sfx Sword_Fight5 punch_hit_blowup Wpn_PunchHvy
+action_sfx Sword_Fight6 punch_hit_blowup Wpn_SwordHit
+action_sfx Sword_LungeLand punch_hit_blowup Wpn_SwordSlam
+vfxlevel_override "VFX_PunchEffects"
+moving_icon_start
+cameraOffset x 0 y -0.025 z -0.05 ry 10
+action "Icon_idle"
+moving_icon_end
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

@@ -1,0 +1,80 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+tiptoe_speed=0.3
+moving_icon_start
+cameraOffset x 0.0 y -0.03 z 0.0
+action "Pistol_Idle"
+moving_icon_end
+icon_override "Finn"
+name FINN
+Ability "AT_HudOverride"
+Ability "AudioReactionDataFinn"
+Ability "High_Jump"
+Ability "Wall_Jump"
+Ability "Twirl"
+Ability "FinnWeaponChooser"
+Ability "CanUpgradeJakeCarAndWarElephant"
+Ability "Finn_Selectionring"
+Ability "FINNTARGETING"
+Ability "VehicleDontBackupCharLayers"
+Ability "CanUseFinnContextSwitch"
+Ability "CanUseFinnDanceGame"
+Ability "ZeusFightingDontPreferSword"
+Ability "FromAdventureTime"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "IdleAnimOnlyGadgetWheelAddon"
+Ability "WalkOnTightRope"
+Ability "StandardCharacterTag"
+Ability "ShowDLCMessageAT"
+Ability "ContentUnlock" (StoryName=#LPAdventureTime,WorldName=#HUBW_AdventureTime,StoryHint="HINT_FINN_LEVEL",WorldHint="HINT_FINN");
+Ability "UnlockBattleArena" (Checkpoint="AT_BA_Day", UnlockedHint="HINT_AT_BATTLEARENA_DAY_UNLOCKED", DLCRequiredHint="HINT_DLC_DOWNLOAD_REQUIRED")
+Ability "RemoveDefaultItems" ( item_type=#FinnCrystal, checkpoint=#CrystalSword, false )
+Ability "ImpliedInteractWithIce"
+Ability "OpusFinnItemsAbility"
+Ability "FinnCanBeFern"
+Ability "FinnJakeSuitCamera"
+Ability "TwirlHint"
+default_item "FinnScarlet" always_got held
+default_item "FinnSwordDemon" always_got away
+default_item "FINNSWORD" always_got away
+default_item "FinnGrass" always_got away
+default_item "FinnRoot" always_got away
+default_item "FinnCrystal" always_got away
+default_item "FinnGauntlet" always_got away
+default_item "FinnCrossbow" always_got away
+default_item "FinnGrapple" always_got away
+has_whip tex="18_LimeRope"
+grapple_gun_locator=0
+can_grapple
+sfx_Hurt "VO_Finn_Pain"
+sfx_Die "VO_Finn_Death"
+sfx_Doomed "VO_Finn_Death"
+vfxlevel_override "VFX_Finn"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

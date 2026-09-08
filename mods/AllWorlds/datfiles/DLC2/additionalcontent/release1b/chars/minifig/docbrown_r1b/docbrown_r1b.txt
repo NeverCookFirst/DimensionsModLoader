@@ -1,0 +1,60 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "DocBrown"
+name DOCBROWN
+hit_points=1
+Ability "BTTFTargeting"
+Ability "Docbrown_Selectionring"
+Ability "BTTF_HudOverride"
+Ability "TechnoAccessAbility"
+Ability "FromBTTF"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "DelorianDrone"
+Ability "CanUseBennyHacking"
+Ability "Wrench"
+Ability "CanUpgradeHoverTrain"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataDOCBROWN"
+Ability "ContentUnlock" (WorldName=#HUBW_BTTF,WorldHint="HINT_DOCBROWN");
+Ability "DocBrown_Lunge_Shockewave"
+Ability "PunchEffect_DocBrown"
+ability "DocBrownSpawnAudio"
+clear_default_items
+sfx_Hurt "VO_GenMOld_Pain"
+sfx_Die "VO_GenMOld_Death"
+sfx_Doomed "VO_GenMOld_Death"
+vfxlevel_override "VFX_DocBrown"
+vfxlevel_override "VFX_GenericPunchEffect" EXTRA_SLOT1
+StreakData
+Life 0.3
+WidthScale 0.5
+Colour 225 225 225 120
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

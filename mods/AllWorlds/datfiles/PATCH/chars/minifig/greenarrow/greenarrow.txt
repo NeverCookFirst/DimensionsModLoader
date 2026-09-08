@@ -1,0 +1,66 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "GreenArrow"
+name GREENARROW
+moving_icon_start
+action "Bow_Idle"
+moving_icon_end
+hit_points=1
+Ability "AcrobatCharacterAbility"
+Ability "StandardCharacterTag"
+Ability "ImpliedAllowTriggeredIfHitByGun"
+Ability "ImpliedAllowTwirlPolePluggable"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+Ability "Grapples"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "DC_HudOverride"
+Ability "GreenarrowTargeting"
+Ability "Greenarrow_Selectionring"
+Ability "AudioReactionDataGreenArrow"
+ability "LegolasSpawnAudio"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_GREENARROW");
+Ability "GreenArrowShockwave"
+clear_default_items
+default_item "GreenArrow_Bow" always_got held
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 50 50 50 200
+VfxType "VFX_CombatSpang_White"
+EndStreakData
+can_grapple
+has_whip
+sfx_Hurt "VO_GreenArrow_Pain"
+sfx_Die "VO_GreenArrow_Death"
+sfx_Doomed "VO_GreenArrow_Death"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

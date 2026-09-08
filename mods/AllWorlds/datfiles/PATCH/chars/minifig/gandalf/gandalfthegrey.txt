@@ -1,0 +1,60 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "GANDALFTHEGREY"
+name GANDALFTHEGREY
+moving_icon_start
+action "Staff_Idle"
+moving_icon_end
+Ability "MagicLocomote"
+Ability "DefLungeShockwave"
+Ability "GandalfSpawnAudio"
+Ability "LOTR_HudOverride"
+Ability "GANDALF_Targeting"
+Ability "Gandalf_Selectionring"
+Ability "AudioReactionDataGandalfTheGrey"
+Ability "GandalfForceField"
+Ability "MagicGlowSettings"
+Ability "FromLOTR"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "CharacterWaveReleased"
+Ability "PreventInteractWaterGrowSpot"
+Ability "ContentUnlock" (WorldName=#HUBW_LOTR,WorldHint="HINT_GANDALF");
+clear_default_items
+default_item "GandalfStaff" always_got held
+streak blue
+magic
+beard
+flat_armour
+sfx_Hurt "VO_Gandalf_Pain"
+sfx_Die "VO_Gandalf_Death"
+sfx_Doomed "VO_Gandalf_Death"
+vfxlevel_override "VFX_Gandalf"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

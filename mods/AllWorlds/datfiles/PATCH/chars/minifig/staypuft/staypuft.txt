@@ -1,0 +1,71 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "StayPuft"
+name STAYPUFT
+hit_points=1
+tiptoe_speed=0.1595
+moving_icon_start
+cameraOffset ry 10
+cameraOffset y 0.0025
+moving_icon_end
+Ability "TransformToAngryStayPuft"
+Ability "CharacterWaveReleased"
+Ability "ImmuneToToxicWithHint"
+Ability "GhostPhobiaImmuneAbility"
+Ability "FromGhostbusters"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "FromGhostbusters2016"
+Ability "Staypuft_Selectionring"
+Ability "PeterVenkmanTargeting"
+Ability "GHOSTBUSTERS_HudOverride"
+ability "CanUpgradeTerrorDog"
+Ability "StandardCharacterTag"
+Ability "ContentUnlock" (WorldName=#HUBW_Ghostbusters,WorldHint="HINT_STAYPUFT");
+Ability "ApplyTransformedCharAbilityDuringTransform"
+Ability "StayPuft_Lunge_Shockewave"
+Ability "PunchEffect_SPMini"
+Ability "MiniStayPuftStep"
+Ability "AudioReactionDataStayPuftMini"
+ability "StayPuftSpawnAudio"
+Ability "ShowDLCMessageGhostbusters"
+Ability "PreventUnderwaterInteractions"
+Ability "ImpliedInteractWithSuperStrength"
+Ability "PuftJakeSuitCamera"
+clear_default_items
+sfx_Hurt "VO_StayPuftMini_Pain"
+sfx_Die "VO_StayPuftMini_Death"
+sfx_Doomed "VO_StayPuftMini_Death"
+vfxlevel_override "VFX_StayPuft"
+StreakData
+Life 0.3
+WidthScale 0.7
+colour 255 255 255 50
+MaterialSpecial "Stay_Puft_Beam1"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

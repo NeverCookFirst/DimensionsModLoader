@@ -1,0 +1,85 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "WonderWoman"
+name WONDERWOMAN
+hit_points=1
+Ability "DC_HudOverride"
+Ability "AcrobatCharacterAbility"
+Ability "WONDERWOMAN_Targeting"
+Ability "Wonderwoman_Selectionring"
+Ability "WonderWomanDivingFlying"
+Ability "InteractWithCrackedLegoDefault"
+Ability "ImmuneToLightningElectricity"
+Ability "ImmuneToToxic"
+Ability "ImmuneToFire"
+Ability "ImmuneToDamage"
+Ability "ImmuneToMudKill"
+Ability "ImmuneToNature"
+Ability "ImmuneToWater"
+Ability "WonderWomanShockwave"
+Ability "PunchEffect_WonderWoman"
+Ability "AttackStreaks_WonderWoman"
+Ability "GrappleHideItems"
+Ability "WWomanGodRaysCallOut"
+Ability "HintInteractInvulnerable"
+has_invincibility
+Ability "Super_Strength"
+ability "WonderWomanSpawnAudio"
+Ability "Grapples"
+Ability "LassoOfTruthMindControl"
+Ability "WonderWomanDeflect"
+Ability "DisguiseOverride" ( disableHiddenLayers )
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeInvisibleJet"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataWONDERWOMAN"
+Ability "CanInteractWithBatarangSlot"
+Ability "CharacterWaveReleased"
+can_grapple
+grapple_gun_locator=0
+has_whip tex="9_wonderWomanLasso"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_WONDERWOMAN");
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 255 0 0 150
+VfxType "VFX_CombatSpang"
+EndStreakData
+clear_default_items
+default_item "wonderWomanTiara" always_got
+sfx_Hurt "VO_WonderWoman_Pain"
+sfx_Die "VO_WonderWoman_Death"
+sfx_Doomed "VO_WonderWoman_Death"
+vfxlevel_override "VFX_Wonderwoman"
+vfxlevel_override "VFX_PunchEffects" EXTRA_SLOT1
+vfxlevel_override "VFX_GenericPunchEffect" EXTRA_SLOT2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

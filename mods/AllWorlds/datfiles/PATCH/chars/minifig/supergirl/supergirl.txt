@@ -1,0 +1,87 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "SuperGirl"
+name SUPERGIRL
+hit_points=1
+Ability "StandardCharacterTag"
+Ability "InteractWithCrackedLegoDefault"
+Ability "ABILITY_DISMOUNT_VEHICLES_ON_DEATH"
+Ability "ImpliedInteractWithIce"
+Ability "Super_Strength"
+Ability "SuperStrengthSmashOnContact"
+Ability "MegaItemPickup"
+Ability "SpellItFastBuild"
+Ability "PunchHit" ( DieAirOnly, hitAnim='Die_Air_Dwalin1' ) allow_extension
+Ability "HintInteractInvulnerable"
+Ability "CharacterWaveReleased"
+Ability "ImmuneToLightningElectricity"
+Ability "ImmuneToToxic"
+Ability "ImmuneToFire"
+Ability "ImmuneToWater"
+Ability "ImmuneToDamage"
+Ability "ImmuneToMudKill"
+Ability "ImmuneToNature"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "DC_HudOverride"
+Ability "SupergirlDivingFlying"
+Ability "Supergirl_Selectionring"
+Ability "SupergirlTargeting"
+Ability "SupermanLaserVision"
+Ability "SupermanXRay"
+Ability "PunchEffect_Superman"
+Ability "AudioReactionDataSUPERGIRL"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_SUPERGIRL");
+Ability "SuperManGroundCrackAttack"
+Ability "SupermanRegen"
+ability "SupermanSpawnAudio"
+Ability "SupermanGodRaysCallOut"
+Ability "SuperManFreezeConeAttack"
+Ability "TransformToSupergirlRedLantern"
+Ability "ImpliedInteractWithSuperStrength"
+clear_default_items
+has_invincibility
+vfxlevel_override "VFX_Superman"
+vfxlevel_override "VFX_DefaultGroundCracks" EXTRA_SLOT1
+vfxlevel_override "VFX_GenericPunchEffect" EXTRA_SLOT2
+resource_start=#GSC
+tag=#STREAKS_SCENE
+path='Levels\VFX\VFX_Chars\VFX_Gen\VFX_Gen.GSC'
+resource_end
+StreakData
+Life 0.35
+WidthScale 0.5
+Colour 255 75 75 255
+MaterialSpecial "Streak_Default"
+EndStreakData
+sfx_Hurt "VO_Supergirl_Pain"
+sfx_Die "VO_Supergirl_Death"
+sfx_Doomed "VO_Supergirl_Death"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

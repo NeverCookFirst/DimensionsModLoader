@@ -1,0 +1,81 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "WickedWitch"
+name WICKEDWITCH
+moving_icon_start
+action "Idle_Icon"
+cameraOffset ry -15
+moving_icon_end
+hit_points=1
+tiptoe_speed= 0.2
+Ability "OZ_HudOverride"
+ability "WickedWitchSpawnAudio"
+Ability "Magic"
+Ability "MagicGlowSettings_WickedWitch"
+Ability "MagicLocomote"
+Ability "SpellIt"
+Ability "WickedWitchFlying"
+Ability "WickedwitchTargeting"
+Ability "WickedWitchForceField"
+Ability "WaterPhobia"
+Ability "WickedWitchShooting"
+Ability "WickedWitchIllumination"
+bolt_type "WickedWitchMagicBolt"
+Ability "WickedWitchMindControl"
+Ability "PreventInteractWaterGrowSpot"
+Ability "WickedWitch_Selectionring"
+Ability "CanUpgradeFlyingMonkey"
+Ability "FromWizardOfOz"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataWickedWitch"
+Ability "AllowDisguise"
+Ability "ContentUnlock" (WorldName=#HUBW_OZ,WorldHint="HINT_WICKEDWITCH");
+Ability "ImpliedInteractWithLegoSilver"
+Ability "HurtByWater"
+Ability "ImmuneToWater" suppress
+Ability "WickedWitchPhobia"
+Ability "HideLayer25"
+Ability "CharacterWaveReleased"
+Ability "SonicWaterBubbleWitch"
+StreakData
+Life 0.4
+WidthScale 2
+MaterialSpecial "Streak_Default1"
+Colour 12 255 0 5
+VfxType "VFX_CombatSpang_Green"
+EndStreakData
+clear_default_items
+default_item "Broomstick" always_got held
+sfx_Hurt "VO_WWitch_Pain"
+sfx_Die "VO_WWitch_Death"
+sfx_Doomed "VO_WWitch_Death"
+vfxlevel_override "VFX_WickedWitch"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

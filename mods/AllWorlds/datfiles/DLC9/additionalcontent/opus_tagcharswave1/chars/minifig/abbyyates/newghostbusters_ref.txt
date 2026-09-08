@@ -1,0 +1,47 @@
+Ability "OpusGhostbuster"
+Ability "HideLayer25"
+Ability "FromGhostbusters"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "FromGhostbusters2016"
+Ability "ImmuneToToxicWithHint"
+Ability "ImpliedInteractWithIce"
+Ability "CanUseGB2016ContextSwitch"
+StreakData
+Life 0.3
+WidthScale 2.2
+MaterialSpecial "Streak_Default"
+Colour 50 50 50 200
+VfxType "VFX_CombatSpang_Pink"
+EndStreakData
+clear_default_items
+default_item "FakeGhostTrapA" always_got away
+default_item "NewProtonGun" always_got held
+define_locator="attach_shoot",1,attachment="Proton_Gun"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

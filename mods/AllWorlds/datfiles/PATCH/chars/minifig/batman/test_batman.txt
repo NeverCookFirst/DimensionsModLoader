@@ -1,0 +1,61 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+tiptoe_speed=0.16794
+icon_override "Test_Batman"
+name TEST_BATMAN
+Ability "DC_HudOverride"
+Ability "DefLungeShockwave"
+Ability "Grapples"
+Ability "Batmantargeting"
+Ability "BatmanSpawnAudio"
+Ability "Batman_Selectionring"
+Ability "CanUpgradeBatMobile"
+Ability "BatmanInvisibility"
+Ability "Dodge"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataBATMAN"
+Ability "CanInteractWithBatarangSlot"
+Ability "PreventUnderwaterInteractions"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_BATMAN");
+clear_default_items
+default_item "BatarangItem" always_got away
+default_item "batGrapple" always_got away
+can_grapple
+grapple_gun_locator=1
+has_whip tex="7_LEGOBlackRope3D"
+sfx_Hurt "VO_Batman_Pain"
+sfx_Die "VO_Batman_Death"
+sfx_Doomed "VO_Batman_Death"
+action_sfx RunAttack_Batman punch_hit_Char Wpn_KickLow
+action_sfx RunAttack_Batman punch_hit_Blowup Wpn_KickLow
+vfxlevel_override "VFX_Batman"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

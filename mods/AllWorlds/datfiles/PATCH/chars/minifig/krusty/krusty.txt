@@ -1,0 +1,74 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Krusty"
+name KRUSTY
+hit_points=1
+tiptoe_speed=0.1206
+moving_icon_start
+action "Idle_Icon"
+cameraOffset y 0.001
+ignore_cylinder
+moving_icon_end
+Ability "CharacterWaveReleased"
+Ability "Simpsons_HudOverride"
+Ability "KrustyTargeting"
+Ability "CanUpgradeKrustyClownBike"
+Ability "FromSimpsons"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "WaterSpinAttackAbility"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataKrusty"
+Ability "Krusty_Selectionring"
+Ability "ContentUnlock" (WorldName=#HUBW_Simpsons,WorldHint="HINT_KRUSTY");
+Ability "KrustySeltzerBottle"
+Ability "KrustyShockwave"
+Ability "MechTargetingFillSwitch"
+ability "KrustySpawnAudio"
+ability "PunchEffect_Krusty"
+Ability "PreventUnderwaterInteractions"
+Ability "ShowDLCMessageSimpsons"
+Ability "AbleToUseWaterGrowViaObstacleDriver"
+Ability "KrustyJakeSuitCamera"
+Ability "ImpliedInteractWaterGrowSpot"
+clear_default_items
+default_item "KrustyPie" always_got away
+default_item "KrustySeltzer" always_got away
+StreakData
+Life 0.25
+WidthScale 0.7
+MaterialSpecial "Streak_Default1"
+Colour 252 255 0 75
+VfxType "VFX_CombatSpang_Yellow"
+EndStreakData
+sfx_Hurt "VO_Krusty_Pain"
+sfx_Die "VO_Krusty_Death"
+sfx_Doomed "VO_Krusty_Death"
+vfxlevel_override "VFX_Krusty"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

@@ -1,0 +1,71 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+run_speed=2.0
+icon_override "Legolas"
+name LEGOLAS
+moving_icon_start
+action "Bow_Idle"
+moving_icon_end
+hit_points=1
+run_speed=2.0
+sprint_speed=2.6
+Ability "LegolasTargeting"
+Ability "AcrobatCharacterAbility"
+Ability "LOTR_HudOverride"
+Ability "CanUpgradeLegolasBalista"
+Ability "Legolas_Selectionring"
+Ability "LegolasRailGrinding"
+Ability "FromLOTR"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataLegolas"
+Ability "ContentUnlock" (WorldName=#HUBW_LOTR,WorldHint="HINT_LEGOLAS");
+Ability "LegolasShockwave"
+Ability "ImpliedAllowTriggeredIfHitByGun"
+Ability "ImpliedAllowTwirlPolePluggable"
+Ability "CharacterWaveReleased"
+ability "LegolasSpawnAudio"
+Ability "PreventUnderwaterInteractions"
+clear_default_items
+default_item "LegolasBow" always_got held
+default_item "LegolasDagger" always_got away
+default_item "LegolasDagger" always_got away
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 50 50 50 200
+VfxType "VFX_CombatSpang_White"
+EndStreakData
+sfx_Hurt "VO_Legolas_Pain"
+sfx_Die "VO_Legolas_Death"
+sfx_Doomed "VO_Legolas_Death"
+vfxlevel_override "VFX_Legolas"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

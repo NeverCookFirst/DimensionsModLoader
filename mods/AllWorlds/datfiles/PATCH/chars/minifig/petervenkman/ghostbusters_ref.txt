@@ -1,0 +1,63 @@
+Ability "PeterVenkmanTargeting"
+Ability "ImmuneToToxicWithHint"
+Ability "FromGhostbusters"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "FromGhostbusters2016"
+Ability "CanUpgradeEctoAndGhostTrap"
+Ability "StandardCharacterTag"
+Ability "Venkman_HudOverride"
+Ability "ImpliedGhostObstacleInteraction"
+ability "DefaultSpinAttackAbility"
+Ability "Petervenkman_Selectionring"
+Ability "ContentUnlock" (WorldName=#HUBW_Ghostbusters,StoryName=#LPGhostbusters,WorldHint="HINT_PETERVENKMAN",StoryHint="HINT_PETERVENKMAN_LEVEL");
+Ability "Venkman_VenkmanVfxAbility"
+Ability "VenkmanShockwave"
+ability "PeterVenkmanSpawnAudio"
+Ability "HideLayer25"
+Ability "PreventUnderwaterInteractions"
+Ability "ShowDLCMessageGhostbusters"
+Ability "CanUseGB2016ContextSwitch"
+clear_default_items
+default_item "VenkmanGun" always_got held
+backpack_layer 14
+backpack_layer 25
+StreakData
+Life 0.3
+WidthScale 2.2
+MaterialSpecial "Streak_Default"
+Colour 50 50 50 200
+VfxType "VFX_CombatSpang_Pink"
+EndStreakData
+sfx_Hurt "VO_GenMale1_Pain"
+sfx_Die "VO_GenMale1_Death"
+sfx_Doomed "VO_GenMale1_Death"
+vfxlevel_override "VFX_PeterVenkman"
+vfxlevel_override "VFX_PunchEffects" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

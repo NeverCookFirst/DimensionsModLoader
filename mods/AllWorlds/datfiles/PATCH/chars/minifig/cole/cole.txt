@@ -1,0 +1,71 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+tiptoe_speed=0.2179
+walk_speed=0.5
+run_speed=2.0
+sprint_speed=2.6
+icon_override "Cole"
+name COLE
+moving_icon_start
+cameraOffset x 0.0 y -0.1 z -0.0
+action "Ride"
+moving_icon_end
+hit_points=1
+max_aim_targets=1
+Ability "CharacterWaveReleased"
+Ability "Ninjago_HudOverride"
+Ability "AcrobatCharacterAbility"
+Ability "BlueSpinjitsuWarrior"
+Ability "ColeDeflect"
+Ability "Dodge"
+Ability "SenseiWuInvisibility"
+Ability "Backflip"
+Ability "InteractWithCrackedLegoDefault"
+Ability "FromNinjago"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "Cole_Selectionring"
+Ability "ColeTargeting"
+Ability "CanUpgradeNinjagoColeJet"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataCole"
+ability "ColeSpawnAudio"
+Ability "ColeShockwave"
+Ability "AttackStreaks_Cole"
+Ability "MegaPickUpChima"
+Ability "ContentUnlock" (WorldName=#HUBW_Ninjago,WorldHint="HINT_COLE");
+Ability "PreventUnderwaterInteractions"
+clear_default_items
+default_item "ColeScythe" always_got held
+sfx_Hurt "VO_Cole_Pain"
+sfx_Die "VO_Cole_Death"
+sfx_Doomed "VO_Cole_Death"
+vfxlevel_override "VFX_Cole"
+vfxlevel_override "VFX_Ninjagoshared" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                          

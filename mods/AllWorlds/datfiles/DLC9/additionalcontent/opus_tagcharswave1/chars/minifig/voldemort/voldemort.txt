@@ -1,0 +1,69 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "VOLDEMORT"
+name VOLDEMORT
+Tiptoe_Speed=0.1861
+moving_icon_start
+cameraOffset x -0.01 y -0.01 z 0 ry 25
+action "Idle"
+moving_icon_end
+Ability "AudioReactionDataVoldemort"
+Ability "CanUpgradeHogwartsExpress"
+Ability "Voldemort_Selectionring"
+Ability "HP_HudOverride"
+Ability "VoldemortLunge"
+Ability "Voldemort_Targeting"
+Ability "CanUseApparateAccess"
+Ability "AvadaKedavra"
+Ability "VoldemortFlying"
+Ability "StandardCharacterTag"
+Ability "VoldemortSpellItEffects"
+Ability "FromHarryPotter"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "ShowDLCMessageHarryPotter"
+Ability "ContentUnlock" (WorldName=#HUBW_HarryPotter,WorldHint="HINT_VOLDEMORT");
+Ability "UnlockBattleArena" (Checkpoint="HP_BA_Night", UnlockedHint="HINT_HP_BATTLEARENA_UNLOCKED", DLCRequiredHint="HINT_DLC_DOWNLOAD_REQUIRED")
+Ability "VoldemortJakeSuitCamera"
+Ability "VoldemortMindControl"
+Ability "CanUseParseltongueSwitch"
+Ability "VoldemortDeflect"
+Ability "HarryPotterAguamenti_SuppressCheck"
+clear_default_items
+default_item "VoldemortWand" always_got held
+sfx_Hurt "VO_GenMGoon_Pain"
+sfx_Die "VO_GenMGoon_Death"
+sfx_Doomed "VO_GenMGoon_Death"
+vfxlevel_override "VFX_OPUS_Voldemort"
+StreakData
+Life 0.4
+WidthScale 2
+MaterialSpecial "BEAM_Voldemort_Lumos"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

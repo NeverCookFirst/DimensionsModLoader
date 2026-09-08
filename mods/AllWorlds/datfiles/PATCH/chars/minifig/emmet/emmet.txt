@@ -1,0 +1,64 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Emmet"
+name EMMET
+hit_points=1
+Ability "EmmetTargeting"
+Ability Movie_HudOverride
+Ability "Wrench"
+Ability "StandardDrill"
+Ability "ProjectZeusUseMasterBuildIts"
+Ability "Emmet_Selectionring"
+Ability "FromLEGOMovie"
+Ability "FromDC"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeEmmetsExcavator"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataEmmet"
+ability "DefaultSpinAttackAbility"
+Ability "ContentUnlock" (WorldName=#HUBW_LegoMovie,WorldHint="HINT_EMMET");
+Ability "CanRideRidable_LegoMovieCharacters"
+Ability "UseLegoMovieRideAnims"
+ability "EmmetSpawnAudio"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+StreakData
+Life 0.2
+WidthScale 0.25
+MaterialSpecial "Streak_Default"
+Colour 255 255 0 40
+EndStreakData
+clear_default_items
+default_item "EmmetsDrill" always_got away
+sfx_Hurt "EMMET_PAINSMALL"
+sfx_Die "EMMET_DEATH"
+sfx_Doomed "EMMET_DEATH"
+vfxlevel_override "VFX_PunchEffects"
+vfxlevel_override "VFX_Emmet" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

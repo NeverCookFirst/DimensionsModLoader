@@ -1,0 +1,67 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Nya"
+name NYA
+moving_icon_start
+cameraOffset x 0 y 0 z -0.05
+action "Idle_Icon"
+moving_icon_end
+baddie
+hit_points=1
+run_speed=2.0
+tiptoe_speed=0.2
+sprint_speed=2.6
+Ability "Nya_Targeting"
+Ability "Ninjago_HudOverride"
+Ability "AcrobatCharacterAbility"
+Ability "Nya_Selectionring"
+Ability "CrimsonSpinjitsuWarrior"
+Ability "SenseiWuInvisibility"
+Ability "Dodge"
+Ability "NyaDeflect"
+Ability "NyaShockwave"
+Ability "FromNinjago"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeNinjagoNyaMech"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataNya"
+ability "NyaSpawnAudio"
+Ability "ContentUnlock" (WorldName=#HUBW_Ninjago,WorldHint="HINT_NYA");
+Ability "Wrench"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+clear_default_items
+default_item "NyaSwords" always_got held
+default_item "NyaSwords" always_got held
+sfx_Hurt "VO_Nya_Pain"
+sfx_Die "VO_Nya_Death"
+sfx_Doomed "VO_Nya_Death"
+vfxlevel_override "VFX_Nya"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

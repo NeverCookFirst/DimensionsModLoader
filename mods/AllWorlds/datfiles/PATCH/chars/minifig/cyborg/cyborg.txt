@@ -1,0 +1,79 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Cyborg"
+name CYBORG
+moving_icon_start
+cameraOffset x -0.0 y 0.0 z -0.01
+action "Pistol_Idle"
+moving_icon_end
+hit_points=1
+Ability "DC_HudOverride"
+Ability "AquamanDiving"
+Ability "CharacterWaveReleased"
+Ability "TransformToCyborgBigfig"
+Ability "TechnoAccessAbility"
+Ability "CyborgTargeting"
+Ability "CyborgLaserVision"
+Ability "CyborgCrackedLego"
+Ability "MetalSuit_MiniFig"
+Ability "CanUpgradeCyborgsMech"
+Ability "Cyborg_Selectionring"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataCYBORG"
+Ability "ImpliedAllowTriggeredIfHitByGun"
+Ability "CyborgShockwave"
+Ability "ApplyTransformedCharAbilityDuringTransform"
+Ability "PunchEffect_Cyborg"
+Ability "CyborgSuppressTransformUnderwater"
+ability "CyborgSpawnAudio"
+Ability "ImpliedInteractWithIce"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_CYBORG");
+Ability "ImpliedInteractWithSuperStrength"
+Ability "TransformToTTGCyborg"
+Ability "TTGCyborgUnlocker"
+clear_default_items
+default_item "CyborgGun" always_got held
+sfx_Hurt "VO_Cyborg_Pain"
+sfx_Die "VO_Cyborg_Death"
+sfx_Doomed "VO_Cyborg_Death"
+vfxlevel_override "VFX_Cyborg"
+vfxlevel_override "VFX_GenericPunchEffect" EXTRA_SLOT1
+resource_start=#GSC
+tag=#STREAKS_SCENE
+path='Levels\VFX\VFX_Gen\VFX_Gen.GSC'
+resource_end
+StreakData
+Life 5
+WidthScale 2
+MaterialSpecial "Streak_Default1"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

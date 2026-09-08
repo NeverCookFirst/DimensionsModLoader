@@ -1,0 +1,76 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Laval"
+name LAVAL
+tiptoe_speed=0.2502
+hit_points=1
+moving_icon_start
+cameraOffset x -0.025 y -0.06 z -0.1 ry 10
+action "Sword_Idle"
+moving_icon_end
+Ability "ErisTargeting"
+Ability "Chi"
+Ability "LavalChiTransform"
+Ability "CHIMA_HudOverride"
+Ability "Laval_Selectionring"
+Ability "AcrobatCharacterAbility"
+Ability "LavalDeflect"
+Ability "LavalSonarExplosionAttack"
+Ability "FromChima"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeLavalsLionVehicle"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataLAVAL"
+ability "LavalSpawnAudio"
+Ability "ContentUnlock" (WorldName=#HUBW_Chima,WorldHint="HINT_LAVAL");
+Ability "DefLungeShockwaveOffset"
+Ability "DefaultGroundCrackAttack"
+Ability "LavalDeflect"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+Ability "LavalJakeSuitCamera"
+clear_default_items
+default_item "LavalSword" always_got held
+StreakData
+Life 0.3
+WidthScale 0.5
+MaterialSpecial "Streak_Default1"
+Colour 246 20 20 200
+VfxType "VFX_CombatSpang_Red"
+EndStreakData
+sfx_Hurt "VO_GenMale2_Pain"
+sfx_Die "VO_GenMale2_Death"
+sfx_Doomed "VO_GenMale2_Death"
+sfx_punch_hit "Wpn_SwordHit"
+vfxlevel_override "VFX_ChiShared"
+vfxlevel_override "VFX_PunchEffects" EXTRA_SLOT1
+vfxlevel_override "VFX_Laval" EXTRA_SLOT2
+vfxlevel_override "VFX_DefaultGroundCracks" EXTRA_SLOT3
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

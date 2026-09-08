@@ -1,0 +1,69 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Bane"
+name BANE
+hit_points=1
+moving_icon_start
+action "Idle_Icon"
+moving_icon_end
+Ability "DC_HudOverride"
+Ability "TransformToBaneBigfig"
+Ability "BANE_Targeting"
+Ability "Bane_Selectionring"
+Ability "ImmuneToToxic"
+Ability "CanUpgradeBaneMoleMachine"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataBANE"
+Ability "BaneShockwave"
+Ability "PunchEffect_Bane"
+Ability "ApplyTransformedCharAbilityDuringTransform"
+ability "BaneSpawnAudio"
+Ability "AllowDisguise"
+Ability "ContentUnlock" (WorldName=#HUBW_DC,WorldHint="HINT_BANE");
+Ability "PreventUnderwaterInteractions"
+Ability "ImpliedInteractWithSuperStrength"
+Ability "CharacterWaveReleased"
+sfx_Hurt "VO_Bane_Combat_PainH"
+sfx_Die "VO_Bane_Death"
+sfx_Doomed "VO_Bane_Death"
+resource_start=#GSC
+tag=#STREAKS_SCENE
+path='Levels\VFX\VFX_Chars\VFX_Bane\VFX_Bane.GSC'
+resource_end
+StreakData
+Life 0.2
+WidthScale 1
+MaterialSpecial "Bane_Streak_Ob1"
+EndStreakData
+vfxlevel_override ""
+vfxlevel_override "VFX_GenericPunchEffect" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
