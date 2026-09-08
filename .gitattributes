@@ -1,0 +1,4 @@
+# Mod payloads are byte-exact: a replacement file must not be longer than the
+# original inside the archive, and one of them only fits with LF endings.
+# Never let git rewrite line endings in them.
+mods/**/datfiles/** -text
