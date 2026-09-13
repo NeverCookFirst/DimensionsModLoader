@@ -1,4 +1,6 @@
-﻿namespace DimensionsModManager;
+﻿using System.Text;
+
+namespace DimensionsModManager;
 
 /// <summary>
 /// Reader/injector for TT Games .DAT/.HDR archive pairs used by LEGO
@@ -46,6 +48,8 @@ public class DatArchive
     private int version_;
     private int nameCount_;
     private long nameTreeOffset_;
+    private long namesBlobOffset_;   // where nameOff values are measured from
+    private long namesBlobLength_;
     private Dictionary<string, int>? nameMap_;
     private bool crc64_;
     private bool crcWidthResolved_;
@@ -77,10 +81,6 @@ public class DatArchive
     /// </summary>
     public IEnumerable<KeyValuePair<string, int>> EnumerateNames()
     {
-        if (!IsNewFormat)
-        {
-            return Array.Empty<KeyValuePair<string, int>>();
-        }
         nameMap_ ??= BuildNameMap();
         return nameMap_;
     }
@@ -175,9 +175,15 @@ public class DatArchive
         int nameCount = BitConverter.ToInt32(hdr_, (int)pos);
         pos += 4;
         int nameFieldSize = Type <= -5 ? 12 : 8;
+        nameCount_ = nameCount;
+        nameTreeOffset_ = pos;
         pos += (long)nameCount * nameFieldSize;
         uint crcRel = BitConverter.ToUInt32(hdr_, (int)pos);
         pos += 4;
+        // The names blob sits between the crcRel field and the CRC table, and
+        // a node's nameOff is measured from its start.
+        namesBlobOffset_ = pos;
+        namesBlobLength_ = crcRel;
         crcTableOffset_ = pos + crcRel;
         crc64_ = false;
         if (crcTableOffset_ + (long)FileCount * 4 > hdr_.Length)
@@ -205,6 +211,8 @@ public class DatArchive
         int nameEntrySize = ver >= 2 ? 12 : 10;
         long nameTreeStart = 32 + namesSize;
         nameTreeOffset_ = nameTreeStart + 4; // skip [u32 dummy]
+        namesBlobOffset_ = 32;
+        namesBlobLength_ = namesSize;
         // [u32 dummy] + name nodes + [s32 type][u32 fileCount]
         fileTableOffset_ = nameTreeStart + 4 + (long)names * nameEntrySize + 8;
 
@@ -291,16 +299,23 @@ public class DatArchive
     }
 
     /// <summary>
-    /// Builds path -> file-table-index from the new-format name tree. Needed
+    /// Builds path -> file-table-index from the archive's name tree. Needed
     /// because some entries (e.g. PATCH.DAT's TEXT.CSV overrides) have CRCs
-    /// that do not match FNV(path), so CRC lookup misses them.
-    /// Node: { u32 nameOff (0xffffffff = none), u16 folderId (parent node),
-    /// u16 dummy if ver>=2, s16 someId, u16 fileId }. File nodes (fileId != 0)
-    /// get sequential file-table indices in node order; folder nodes carry the
-    /// path prefix for children referencing them via folderId. The very last
-    /// node is always treated as a file (ttgames.bms workaround).
+    /// that do not match FNV(path), so CRC lookup misses them — and because
+    /// the CRC table alone cannot list what an archive contains.
     /// </summary>
-    private Dictionary<string, int> BuildNameMap()
+    private Dictionary<string, int> BuildNameMap() =>
+        IsNewFormat ? BuildNameMapNew() : BuildNameMapClassic();
+
+    /// <summary>
+    /// New-format tree. Node: { u32 nameOff (0xffffffff = none), u16 folderId
+    /// (parent node), u16 dummy if ver>=2, s16 someId, u16 fileId }. File
+    /// nodes (fileId != 0) get sequential file-table indices in node order;
+    /// folder nodes carry the path prefix for children referencing them via
+    /// folderId. The very last node is always treated as a file
+    /// (ttgames.bms workaround).
+    /// </summary>
+    private Dictionary<string, int> BuildNameMapNew()
     {
         var map = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
         var folderPaths = new string[nameCount_ + 1];
@@ -318,13 +333,7 @@ public class DatArchive
             {
                 continue;
             }
-            long s = 32 + nameOff;
-            int len = 0;
-            while (s + len < hdr_.Length && hdr_[s + len] != 0)
-            {
-                len++;
-            }
-            string name = System.Text.Encoding.ASCII.GetString(hdr_, (int)s, len);
+            string name = NameAt(nameOff);
             string full = folderPaths[folderId].Length > 0
                 ? folderPaths[folderId] + "\\" + name
                 : name;
@@ -341,6 +350,62 @@ public class DatArchive
     }
 
     /// <summary>
+    /// Classic-format tree (disc GAME*.HDR), little-endian, 12 bytes per node
+    /// on type &lt;= -5: { u32 hash, u32 nameOff, u16 folderId, u16 fileId }.
+    /// Two things differ from the new format: fileId is the file-table index
+    /// ITSELF (not a running count of file nodes), and node 0 is a dummy whose
+    /// nameOff is garbage — it is the implicit root that folderId 0 means.
+    /// The 8-byte node variant (type &gt; -5) is not used by Dimensions and is
+    /// skipped rather than guessed at.
+    /// </summary>
+    private Dictionary<string, int> BuildNameMapClassic()
+    {
+        var map = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+        if (Type > -5)
+        {
+            return map;
+        }
+        var folderPaths = new string[nameCount_ + 1];
+        Array.Fill(folderPaths, "");
+        for (int i = 1; i < nameCount_; i++)
+        {
+            long n = nameTreeOffset_ + (long)i * 12;
+            uint nameOff = U32LE(n + 4);
+            int folderId = BitConverter.ToUInt16(hdr_, (int)n + 8);
+            int fileId = BitConverter.ToUInt16(hdr_, (int)n + 10);
+            if (nameOff >= namesBlobLength_ || folderId > nameCount_)
+            {
+                continue;
+            }
+            string name = NameAt(nameOff);
+            string full = folderPaths[folderId].Length > 0
+                ? folderPaths[folderId] + "\\" + name
+                : name;
+            if (fileId != 0 && fileId < FileCount)
+            {
+                map[full] = fileId;
+            }
+            else
+            {
+                folderPaths[i] = full;
+            }
+        }
+        return map;
+    }
+
+    /// <summary>NUL-terminated name at |nameOff| inside the names blob.</summary>
+    private string NameAt(uint nameOff)
+    {
+        long s = namesBlobOffset_ + nameOff;
+        int len = 0;
+        while (s + len < hdr_.Length && hdr_[s + len] != 0)
+        {
+            len++;
+        }
+        return System.Text.Encoding.ASCII.GetString(hdr_, (int)s, len);
+    }
+
+    /// <summary>
     /// Returns the entry index for an internal path, or -1. The CRC table is
     /// authoritative (CRC[i] belongs to file-table entry i); the name tree is
     /// only a last-resort fallback for the few entries whose stored CRC does
@@ -350,7 +415,7 @@ public class DatArchive
     {
         EnsureCrcWidth();
         int byCrc = FindEntryByCrc(internalPath);
-        if (byCrc >= 0 || !IsNewFormat)
+        if (byCrc >= 0)
         {
             return byCrc;
         }
@@ -466,6 +531,61 @@ public class DatArchive
         byte[] buf = new byte[zsize];
         dat.ReadExactly(buf);
         return buf;
+    }
+
+    /// <summary>
+    /// Reads an entry and decompresses it if it is stored compressed.
+    ///
+    /// A compressed entry is a run of chunks, each with its own 12-byte header:
+    /// a four-character compression tag, the compressed size and the
+    /// decompressed size, both little-endian. Chunks repeat until the entry's
+    /// full size is produced. A chunk whose two sizes are equal is stored raw,
+    /// which happens for the tail of an entry even when everything before it
+    /// was compressed. Only DFLT is handled; anything else is returned as-is
+    /// rather than silently producing garbage.
+    /// </summary>
+    public byte[] ReadEntryDataDecompressed(int index)
+    {
+        byte[] raw = ReadEntryData(index);
+        var (_, _, size) = GetEntry(index);
+        if (size == 0 || raw.Length < 12 || Encoding.ASCII.GetString(raw, 0, 4) != "DFLT")
+        {
+            return raw;
+        }
+
+        byte[] output = new byte[size];
+        var dflt = new Dflt();
+        int inPos = 0;
+        int outPos = 0;
+        while (outPos < output.Length && inPos + 12 <= raw.Length)
+        {
+            string tag = Encoding.ASCII.GetString(raw, inPos, 4);
+            int compressed = BitConverter.ToInt32(raw, inPos + 4);
+            int decompressed = BitConverter.ToInt32(raw, inPos + 8);
+            inPos += 12;
+            if (tag != "DFLT" || compressed < 0 || decompressed < 0 ||
+                inPos + compressed > raw.Length || outPos + decompressed > output.Length)
+            {
+                break;
+            }
+
+            if (compressed == decompressed)
+            {
+                Array.Copy(raw, inPos, output, outPos, decompressed);
+            }
+            else
+            {
+                byte[] chunkIn = new byte[compressed];
+                Array.Copy(raw, inPos, chunkIn, 0, compressed);
+                byte[] chunkOut = new byte[decompressed];
+                dflt.Reset();
+                dflt.Decompress(chunkIn, compressed, chunkOut, decompressed);
+                Array.Copy(chunkOut, 0, output, outPos, decompressed);
+            }
+            inPos += compressed;
+            outPos += decompressed;
+        }
+        return outPos == output.Length ? output : raw;
     }
 
     /// <summary>Rewrites entry |index| to point at |offset| with |len| bytes,
