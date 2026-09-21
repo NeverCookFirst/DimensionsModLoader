@@ -1,0 +1,7 @@
+{
+  "name": "Language: Russian",
+  "author": "koctr113",
+  "version": "1.0",
+  "platform": "any",
+  "description": "Injects STUFF\\TEXT\\TEXT.CSV into PATCH.DAT (the update's copy overrides the disc). Point the Game folder at the recomp's update folder, where PATCH.DAT lives. The RPCS3 counterpart is a separate mod, RPCS3_TextTest, so the two phrases never collide."
+}

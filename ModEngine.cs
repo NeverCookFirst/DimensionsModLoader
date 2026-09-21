@@ -261,7 +261,15 @@ public static class ModEngine
                 DatLength = new FileInfo(datPath).Length,
                 DatPath = Path.GetFullPath(datPath),
             });
-            foreach (((_, string internalPath), (string sourceFile, string modName)) in group)
+            // In-place injections first, additions after. An added entry is
+            // inserted at its sorted CRC position and shifts every index past
+            // it, while the state file records in-place indices for restore,
+            // which replays them against the vanilla .HDR - so those indices
+            // must be taken before anything moves.
+            var ordered = group
+                .OrderBy(kv => archive.FindEntry(kv.Key.internalPath) < 0 ? 1 : 0)
+                .ToList();
+            foreach (((_, string internalPath), (string sourceFile, string modName)) in ordered)
             {
                 int index = archive.FindEntry(internalPath);
                 if (index < 0)

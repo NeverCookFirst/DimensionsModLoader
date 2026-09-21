@@ -686,19 +686,43 @@ public class DatArchive
         long fileTableEnd = fileTableOffset_ + (long)FileCount * fileEntrySize_;
         long crcTableEnd = crcTableOffset_ + (long)FileCount * crcWidth;
 
-        // Both tables are contiguous, so the new file entry is inserted where the
-        // CRC table starts and everything past it slides along. PATCH.DAT keeps
-        // data after the CRC table; it is carried over untouched.
-        var grown = new byte[hdr_.Length + fileEntrySize_ + crcWidth];
-        Array.Copy(hdr_, 0L, grown, 0L, fileTableEnd);
-        Array.Copy(hdr_, fileTableEnd, grown, fileTableEnd + fileEntrySize_, crcTableEnd - fileTableEnd);
-        Array.Copy(hdr_, crcTableEnd, grown, crcTableEnd + fileEntrySize_ + crcWidth,
-                   hdr_.Length - crcTableEnd);
+        // The CRC table is sorted ascending and the game finds files by binary
+        // searching it (verified on DLC9: 35994 entries, zero descending
+        // steps; an entry appended out of order made the whole DLC report as
+        // not installed). So the new entry goes at its sorted position, in
+        // both tables at once - the CRC at position i names file-table entry i.
+        ulong newCrc = crc64_ ? PathCrc64(internalPath) : PathCrc32(internalPath);
+        int index = 0;
+        {
+            int lo = 0, hi = FileCount;
+            while (lo < hi)
+            {
+                int mid = (lo + hi) / 2;
+                ulong at = crc64_ ? U64BE(crcTableOffset_ + (long)mid * 8)
+                                  : U32BE(crcTableOffset_ + (long)mid * 4);
+                if (at < newCrc) lo = mid + 1; else hi = mid;
+            }
+            index = lo;
+        }
 
-        int index = FileCount;
+        long fileInsert = fileTableOffset_ + (long)index * fileEntrySize_;
+        long crcInsert = crcTableOffset_ + (long)index * crcWidth;
+        var grown = new byte[hdr_.Length + fileEntrySize_ + crcWidth];
+        long dst = 0;
+        Array.Copy(hdr_, 0L, grown, dst, fileInsert); dst += fileInsert;
+        dst += fileEntrySize_;                                   // new file entry (written below)
+        Array.Copy(hdr_, fileInsert, grown, dst, crcInsert - fileInsert); dst += crcInsert - fileInsert;
+        dst += crcWidth;                                         // new CRC (written below)
+        Array.Copy(hdr_, crcInsert, grown, dst, hdr_.Length - crcInsert);
+
         hdr_ = grown;
         crcTableOffset_ += fileEntrySize_;
         FileCount++;
+        // An external .HDR opens with the size of everything after that field.
+        // The game reads exactly that many bytes, so a header that grew but
+        // still announced its old size looked truncated - every table past
+        // the cut was garbage and the whole DLC reported as not installed.
+        WriteU32BE(0, (uint)(hdr_.Length - 4));
         WriteU32BE(20, (uint)FileCount);
         // The name tree is followed by [s32 type][u32 fileCount]; that second
         // copy of the count has to agree with the one in the header.
