@@ -742,6 +742,68 @@ public class DatArchive
         return index;
     }
 
+    /// <summary>
+    /// Renames entries without moving any data: every entry whose internal
+    /// path |rename| maps to a new path gets that path's CRC, and both tables
+    /// are then re-sorted together so the game's binary search still works.
+    /// Nothing is added or removed, so the name tree keeps its count and
+    /// order - the tree simply keeps calling the entry by its old name.
+    /// Meant for a COPY of an archive dropped into a spare INSTALL0_ slot:
+    /// a second archive that offers Finn's cache under Fern's name, say.
+    /// Returns how many entries were renamed. Call SaveHdr afterwards.
+    /// </summary>
+    public int RetagEntries(Func<string, string?> rename)
+    {
+        if (!IsNewFormat)
+        {
+            throw new NotSupportedException(
+                $"{Path.GetFileName(DatPath)}: retagging needs the new archive format.");
+        }
+        EnsureCrcWidth();
+        int crcWidth = crc64_ ? 8 : 4;
+        var crcs = new ulong[FileCount];
+        for (int i = 0; i < FileCount; i++)
+        {
+            crcs[i] = crc64_ ? U64BE(crcTableOffset_ + (long)i * 8)
+                             : U32BE(crcTableOffset_ + (long)i * 4);
+        }
+        int renamed = 0;
+        foreach (var (name, index) in EnumerateNames())
+        {
+            string? to = rename(name);
+            if (to is null || to == name) continue;
+            crcs[index] = crc64_ ? PathCrc64(to) : PathCrc32(to);
+            renamed++;
+        }
+        if (renamed == 0) return 0;
+
+        // Sort a permutation by CRC, then lay both tables out in that order.
+        var order = new int[FileCount];
+        for (int i = 0; i < FileCount; i++) order[i] = i;
+        Array.Sort(order, (a, b) => crcs[a].CompareTo(crcs[b]));
+        var files = new byte[(long)FileCount * fileEntrySize_];
+        var table = new byte[(long)FileCount * crcWidth];
+        for (int dst = 0; dst < FileCount; dst++)
+        {
+            int src = order[dst];
+            Array.Copy(hdr_, fileTableOffset_ + (long)src * fileEntrySize_,
+                       files, (long)dst * fileEntrySize_, fileEntrySize_);
+            ulong c = crcs[src];
+            if (crc64_)
+            {
+                for (int k = 0; k < 8; k++) table[dst * 8 + k] = (byte)(c >> (56 - 8 * k));
+            }
+            else
+            {
+                for (int k = 0; k < 4; k++) table[dst * 4 + k] = (byte)(c >> (24 - 8 * k));
+            }
+        }
+        Array.Copy(files, 0, hdr_, fileTableOffset_, files.Length);
+        Array.Copy(table, 0, hdr_, crcTableOffset_, table.Length);
+        nameMap_ = null;
+        return renamed;
+    }
+
     public void SaveHdr()
     {
         if (embeddedHdr_)
