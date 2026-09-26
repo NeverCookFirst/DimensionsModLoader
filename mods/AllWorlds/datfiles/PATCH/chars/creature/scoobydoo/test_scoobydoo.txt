@@ -1,0 +1,91 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+baddie
+icon_override "Test_ScoobyDoo"
+name TEST_SCOOBYDOO
+run_speed=1.5
+sprint_speed=2.2
+hit_points=1
+Tiptoe_Speed=0.1861
+run_speed=2.0 water
+moving_icon_start
+action "Idle_Icon"
+ignore_cylinder
+moving_icon_end
+define_locator="right_hand",3
+define_locator="beam_shoot",3
+define_locator="left_hand",2
+define_locator="Hip",-1
+define_locator="Backpack",10
+define_locator="Backpack2",-1
+define_locator="hat",-1
+define_locator="ChimaChunkAttach",-1
+define_locator="Attach",16
+define_locator="Goggles",-1
+define_locator="Chest",-1
+define_locator="Sheathe",-1
+define_locator="Sheathe2",-1
+Ability "ScoobyTargeting"
+Ability "ZeusTrackingScooby"
+Ability "Dig"
+Ability "SCOOBY_HudOverride"
+Ability "FromScoobydoo"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeScoobySnack"
+Ability "ScoobyGang_MiniFig"
+Ability "StandardCharacterTag"
+Ability "ScoobyDooInvisibility"
+Ability "AquamanDiving"
+Ability "AudioReactionDataScoobyDoo"
+Ability "Glide"
+Ability "Scooby_Selectionring"
+ability "ScoobyDooSpawnAudio"
+Ability "ContentUnlock" (WorldName=#HUBW_ScoobyDoo,WorldHint="HINT_SCOOBYDOO");
+ability "ScoobyFootPrint"
+Ability "CharacterWaveReleased"
+Ability "DisableRideLayersBlowup_Scooby"
+Ability "ScoobyDooParamTurn"
+UseRunTurnAnims
+turn_action "underwater_turn"
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 50 50 50 200
+VfxType "VFX_CombatSpang_White"
+EndStreakData
+clear_default_items
+grapple_locators 2,3
+tightrope_locators 2,3
+define_locator="beam_shoot",3
+sfx_Hurt "VO_Scooby_Pain"
+sfx_Die "VO_Scooby_Death"
+sfx_Doomed "VO_Scooby_Death"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

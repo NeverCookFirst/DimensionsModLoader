@@ -1,0 +1,134 @@
+layers_special=0,1,2,3,4,5
+layers_dead=3,8,9
+hat_layer_index=3
+max_aim_targets=1
+Ability "GollumTargeting"
+Ability Magnet_Climbing
+ability "CanRideVehicle" suppress
+Ability "AquamanDiving"
+Ability "AcrobatCharacterAbility"
+Ability "CanUseSmallAccess"
+Ability "ZeusTargetingBase"
+Ability "CanUseSwitches"
+ability "Lunge"
+Ability "Gollum_Selectionring"
+Ability "GollumShockwave"
+Ability "LOTR_HudOverride"
+Ability "CanUpgradeGollumShelob"
+Ability "FromLOTR"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataGollum"
+Ability "CanInteractWithBatarangSlot"
+Ability "GollumSpawnAudio"
+Ability "AllowDisguise"
+Ability "ContentUnlock" (WorldName=#HUBW_LOTR,WorldHint="HINT_GOLLUM");
+Ability "ImpliedInteractWithLegoSilver"
+Ability "IconPosOverride_Default"
+Ability "CharacterWaveReleased"
+Ability "DisableRideLayersBlowup_Gollum"
+Ability "DontSkeletonize"
+teleport
+lunge
+orientate
+forceItemsRightHanded
+tiptoe_speed=0.2533
+walk_speed=0.5
+run_speed=1.4
+sprint_speed=2.0
+jump_speed=2.375
+air_gravity=-6.25
+water_gravity=0
+radius=0.1
+miny=0
+maxy=0.34
+scale=1.0
+acceleration=10
+hit_points=4
+turn_rate=1.0
+slide_orientation
+combat_roll
+wall_jump=on
+bolt_type="transform"
+hold_bolt_type="blue"
+turn_action "underwater_turn"
+clear_default_items
+default_item "Gollum_Fish" always_got away
+Fight_sequential
+can_punch
+swimmer on
+clear_default_items
+default_item "GollumFishboomerang" always_got away
+teleport ;small access
+extra_char "GollumSkeleton"
+small
+disable_backpack
+tag_locator=6
+head_locator=2
+head_joint=0
+weapon_locator_1=10
+weapon_locator_1=11
+weapon_shoot_locator=7
+shadow_locators=4,5
+hand_locators=0,1
+grapple_locators 0,1
+supercarry_locator=7C
+thingy_locator=0
+tightrope_over_head
+define_locator="right_hand",0
+define_locator="beam_shoot",0
+define_locator="left_hand",1
+define_locator="Hip",8
+define_locator="Backpack",9
+define_locator="hat",3
+define_locator="Attach",16
+define_locator="Goggles",2
+define_locator="Chest",9
+sfx_Hurt "VO_Gollum_Pain"
+sfx_Die "VO_Gollum_Death"
+sfx_Doomed "VO_Gollum_Death"
+moving_icon_start
+cameraOffset y -0.13
+action "Idle_Icon"
+ignore_cylinder
+moving_icon_end
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 244 209 90 150
+VfxType "VFX_CombatSpang_Green"
+EndStreakData
+zipup
+sfx_Hurt "VO_Gollum_Pain"
+sfx_Die "VO_Gollum_Death"
+sfx_Doomed "VO_Gollum_Death"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

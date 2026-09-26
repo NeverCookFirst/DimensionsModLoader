@@ -1,0 +1,86 @@
+txt_file "Chars\TemplateCharacters\SmallFigTemplate_standard"
+moving_icon_start
+cameraOffset x 0 y -0.06 z -0.11
+action "idle_icon"
+moving_icon_end
+tiptoe_speed=0.2633
+walk_speed=0.4647
+Ability "FS_Flying"
+Ability "AudioReactionDataBlossom"
+Ability "StandardCharacterTag"
+Ability "DefaultLungeAnim"
+Ability "BlossomConstructAbility"
+Ability "BlossomFreezeConeAttack"
+Ability "BlossomLaserVision"
+Ability "CanUseIntelligenceAccess"
+Ability "Dash_Attack"
+Ability "InteractWithCrackedLegoDefault"
+Ability "BlossomXRay"
+Ability "Regeneration"
+Ability "BlossomDiving"
+Ability "BlossomFlying"
+Ability "CanUpgradePPGBird"
+Ability "ShowDLCMessagePowerPuff"
+Ability "UnlockBattleArena" (Checkpoint="PPG_BA_Day", UnlockedHint="HINT_PPG_BATTLEARENA_DAY_UNLOCKED", DLCRequiredHint="HINT_DLC_DOWNLOAD_REQUIRED")
+Ability "Blossom_Selectionring"
+Ability "Blossom_Targeting"
+Ability "PPG_HudOverride"
+Ability "BlossomReactionM"
+Ability "BlossomReactionF"
+Ability "ContentUnlock" (WorldName=#HUBW_PowerpuffGirls,WorldHint="HINT_BLOSSOM");
+Ability "PunchEffect_Blossom"
+Ability "IceHint_Wave4"
+Ability "FromPowerPuff"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+StreakData
+Life 0.8
+WidthScale 2.0
+Colour 255 255 255 255
+MaterialSpecial "vBlossom_Streak1_Ob1"
+EndStreakData
+StreakData
+rule "SkydiveL"
+Life 0.1
+WidthScale 0.015
+Colour 0 0 0 255
+EndStreakData
+StreakData
+rule "SkydiveR"
+Life 0.1
+WidthScale 0.015
+Colour 0 0 0 255
+EndStreakData
+clear_default_items
+sfx_Hurt "VO_Blossom_Pain"
+sfx_Die "VO_Blossom_Death"
+sfx_Doomed "VO_Blossom_Death"
+vfxlevel_override "VFX_Blossom"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

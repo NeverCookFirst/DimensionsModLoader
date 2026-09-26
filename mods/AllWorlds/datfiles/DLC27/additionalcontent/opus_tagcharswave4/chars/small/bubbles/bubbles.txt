@@ -1,0 +1,90 @@
+txt_file "Chars\TemplateCharacters\SmallFigTemplate_standard"
+moving_icon_start
+cameraOffset x -0.01 y -0.07 z -0.20 ry -7
+action "idle_icon"
+moving_icon_end
+tiptoe_speed=0.2633
+walk_speed=0.4647
+Ability "AudioReactionDataBubbles"
+Ability "StandardCharacterTag"
+Ability "FS_Flying"
+Ability "DefaultLungeAnim"
+Ability "BubblesDiving"
+Ability "BubblesConstructAbility"
+Ability "BubblesFlying"
+Ability "BubblesLaserVision"
+Ability "Dash_Attack"
+Ability "Regeneration"
+Ability "InteractWithCrackedLegoDefault"
+Ability "BubblesExplosionAttack"
+Ability "MeleeLEGOrainbow"
+Ability "AquamanCreatures"
+Ability "AquamanConstruct"
+Ability "CanUpgradePPGSquid"
+Ability "CanUseRainbowSpellIts"
+Ability "ShowDLCMessagePowerPuff"
+Ability "UnlockBattleArena" (Checkpoint="PPG_BA_Day", UnlockedHint="HINT_PPG_BATTLEARENA_DAY_UNLOCKED", DLCRequiredHint="HINT_DLC_DOWNLOAD_REQUIRED")
+Ability "CanUseParseltongueSwitch"
+Ability "Bubbles_Selectionring"
+Ability "Bubbles_Targeting"
+Ability "PPG_HudOverride"
+Ability "BubblesReactionM"
+Ability "BubblesReactionF"
+Ability "ContentUnlock" (WorldName=#HUBW_PowerpuffGirls,WorldHint="HINT_BUBBLES");
+Ability "RainbowHint_Wave4"
+Ability "PunchEffect_Bubbles"
+Ability "IceHint_Wave4"
+Ability "FromPowerPuff"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+clear_default_items
+StreakData
+Life 0.8
+WidthScale 2.0
+Colour 255 255 255 255
+MaterialSpecial "vBubbles_Streak1_Ob1"
+EndStreakData
+StreakData
+rule "SkydiveL"
+Life 0.1
+WidthScale 0.015
+Colour 0 0 0 255
+EndStreakData
+StreakData
+rule "SkydiveR"
+Life 0.1
+WidthScale 0.015
+Colour 0 0 0 255
+EndStreakData
+sfx_Hurt "VO_Bubbles_Pain"
+sfx_Die "VO_Bubbles_Death"
+sfx_Doomed "VO_Bubbles_Death"
+vfxlevel_override "VFX_Bubbles"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

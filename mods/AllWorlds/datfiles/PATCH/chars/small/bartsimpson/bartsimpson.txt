@@ -1,0 +1,69 @@
+txt_file "Chars\TemplateCharacters\SmallFigTemplate_standard"
+walk_speed=0.5045
+tiptoe_speed=0.2650
+icon_override "BartSimpson"
+name BARTSIMPSON
+hit_points=1
+moving_icon_start
+cameraOffset z -0.05
+action "slingshot_idle"
+ignore_cylinder
+moving_icon_end
+Ability "CanUseSmallAccess"
+Ability "Simpsons_HudOverride"
+Ability "Bart_Targeting"
+Ability "Bart_Selectionring"
+Ability "FromSimpsons"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeBartsSoapBoxCar"
+Ability "StandardCharacterTag"
+Ability "ContentUnlock" (WorldName=#HUBW_Simpsons,WorldHint="HINT_BARTSIMPSON");
+Ability "DefLungeShockwave"
+Ability "ImpliedAllowTriggeredIfHitByGun"
+ability "BartSpawnAudio"
+Ability "ShowDLCMessageSimpsons"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+Ability "BartJakeSuitCamera"
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 252 255 0 150
+VfxType "VFX_CombatSpang_Yellow"
+EndStreakData
+clear_default_items
+default_item "Bart_SlingShot" always_got held
+sfx_Hurt
+sfx_Die
+sfx_Doomed
+vfxlevel_override "VFX_Bart"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

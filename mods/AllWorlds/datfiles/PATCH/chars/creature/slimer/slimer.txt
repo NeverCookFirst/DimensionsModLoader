@@ -1,0 +1,84 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Slimer"
+name SLIMER
+moving_icon_start
+cameraOffset x 0.0 y -0.1 z -0.17
+action "Idle_Icon"
+moving_icon_end
+baddie
+hit_points=1
+Ability "SlimerHearts"
+Ability "SlimerTargeting"
+Ability "SlimerDivingFlying"
+Ability "CanUseVentAccess"
+Ability "CanUseSmallAccess"
+Ability "FromGhostbusters"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "FromGhostbusters2016"
+Ability "SlimerIllumination"
+Ability "CanUpgradeSlimerGun"
+Ability "StandardCharacterTag"
+Ability "SpellIt"
+Ability "GHOSTBUSTERS_HudOverride"
+Ability "SlimerGooGobble"
+Ability "SlimerSonarExplosionAttack"
+Ability "AudioReactionDataSlimer"
+Ability "Slimer_Selectionring"
+Ability "CanInteractWithBatarangSlot"
+Ability "CharacterWaveReleased"
+Ability "ContentUnlock" (WorldName=#HUBW_Ghostbusters,WorldHint="HINT_SLIMER");
+Ability "SlimerPossessessRideons"
+hit_points=0
+has_invincibility
+Ability "ImmuneToLightningElectricity"
+Ability "GhostPhobiaImmuneAbility"
+Ability "ImmuneToToxic"
+Ability "ImmuneToFire"
+Ability "ImmuneToWater"
+Ability "ImmuneToDamage"
+Ability "ImmuneToMudKill"
+Ability "LooksLikeCharacterIsHovering"
+ability "SlimerSpawnAudio"
+Ability "ShowDLCMessageGhostbusters"
+clear_default_items
+default_item "Sausage" always_got away
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default1"
+Colour 0 255 0 050
+EndStreakData
+define_locator="beam_shoot",0
+sfx_Hurt "VO_Slimer_Pain"
+sfx_Die "VO_Slimer_Death"
+sfx_Doomed "VO_Slimer_Death"
+vfxlevel_override "VFX_Slimer"
+vfxlevel_override "VFX_SonarSmash" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

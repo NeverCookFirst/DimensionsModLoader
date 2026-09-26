@@ -1,0 +1,70 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "JakeDolphin"
+name JAKEDOLPHIN
+Ability "AT_HudOverride"
+Ability "AudioReactionDataJakeDolphin"
+Ability "TransformJakeCharWaitStream"
+Ability "JakeTransformChooser"
+Ability "Dig"
+Ability "Grapples"
+Ability "SwingAttach"
+Ability "JakeDolphinDiving"
+Ability "Jake_Stretch"
+Ability "ShootingConfig_Dolphin" (default_shoot_locator = 21)
+Ability "OnLandJake_SonarAttack"
+Ability "DolphinSonarAttackCheck"
+Ability "PunchEffect_Jake"
+Ability "DefaultLungeAnim"
+Ability "JakeShockwave"
+Ability "JakeGodRaysCallOut"
+Ability "StandardCharacterTag"
+Ability "FromAdventureTime"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "Jake_Selectionring"
+Ability "CanRideVehicle" suppress
+Ability "CanRideRidable" suppress
+bolt_type "DolphinBolt"
+can_grapple
+sfx_Hurt "VO_Jake_Pain"
+sfx_Die "VO_Jake_Death"
+sfx_Doomed "VO_Jake_Death"
+vfxlevel_override "VFX_Jake"
+resource_start=#GSC
+tag=#STREAKS_SCENE
+path='AdditionalContent\OPUS_AdventureTime\levels\VFX\VFX_Chars\VFX_Jake\VFX_JAKE.GSC'
+resource_end
+StreakData
+Life 0.2
+WidthScale 1.5
+Colour 255 100 000 050
+MaterialSpecial "Jake_STREAK_Ob1"
+EndStreakData
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

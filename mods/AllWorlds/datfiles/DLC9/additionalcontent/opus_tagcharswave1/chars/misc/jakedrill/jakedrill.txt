@@ -1,0 +1,60 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "JakeDrill"
+name JAKEDRILL
+moving_icon_start
+cameraOffset x 0 y 0.05 z -0.23
+moving_icon_end
+TargetHeight=0.2
+Ability "AT_HudOverride"
+Ability "AudioReactionDataJAKEDRILL"
+Ability "TransformJakeCharWaitStream"
+Ability "JakeTransformChooser"
+Ability "StandardDrill"
+Ability "Dig"
+Ability "zeusjump"
+Ability "InteractWithCrackedLegoDefault"
+Ability "JakeGodRaysCallOut"
+Ability "DefaultLungeAnim"
+Ability "StandardCharacterTag"
+Ability "FromAdventureTime"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "Jake_Selectionring"
+Ability "CanRideVehicle" suppress
+Ability "CanRideRidable" suppress
+Ability "CanUseSwitches" suppress
+Ability "Ladder" Suppress
+Ability "DefaultCharacterTagItemCharrying" suppress
+Ability "Wall_Climbing" suppress
+sfx_Hurt "VO_Jake_Pain"
+sfx_Die "VO_Jake_Death"
+sfx_Doomed "VO_Jake_Death"
+vfxlevel_override "VFX_Jake"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

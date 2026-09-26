@@ -1,0 +1,85 @@
+txt_file "Chars\TemplateCharacters\SmallFigTemplate_standard"
+moving_icon_start
+cameraOffset x 0 y -0.1 z -0.06
+action "idle_icon"
+moving_icon_end
+tiptoe_speed=0.2633
+walk_speed=0.4647
+Ability "AudioReactionDataButtercup"
+Ability "StandardCharacterTag"
+Ability "FS_Flying"
+Ability "DefaultLungeAnim"
+Ability "ButtercupDiving"
+Ability "InteractWithCrackedLegoDefault"
+Ability "ButtercupConstructAbility"
+Ability "Super_Strength"
+Ability "ButtercupFlying"
+Ability "Regeneration"
+Ability "Dash_Attack"
+Ability "TargetedLunge_Buttercup"
+Ability "ButtercupZorb"
+Ability "CanUpgradePPGRam"
+Ability "ShowDLCMessagePowerPuff"
+Ability "UnlockBattleArena" (Checkpoint="PPG_BA_Night", UnlockedHint="HINT_PPG_BATTLEARENA_NIGHT_UNLOCKED", DLCRequiredHint="HINT_DLC_DOWNLOAD_REQUIRED")
+Ability "Buttercup_Selectionring"
+Ability "Buttercup_Targeting"
+Ability "PPG_HudOverride"
+Ability "ButtercupReactionM"
+Ability "ButtercupReactionF"
+Ability "ButterCupSpinjitsuSwitches"
+Ability "ContentUnlock" (WorldName=#HUBW_PowerpuffGirls,WorldHint="HINT_BUTTERCUP");
+Ability "PunchEffect_Buttercup"
+Ability "FromPowerPuff"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+StreakData
+Life 1.5
+WidthScale 2.0
+Colour 255 255 255 255
+MaterialSpecial "vButtercup_Streak_Ob1"
+EndStreakData
+StreakData
+rule "SkydiveL"
+Life 0.1
+WidthScale 0.015
+Colour 0 0 0 255
+EndStreakData
+StreakData
+rule "SkydiveR"
+Life 0.1
+WidthScale 0.015
+Colour 0 0 0 255
+EndStreakData
+clear_default_items
+sfx_Hurt "VO_Buttercup_Pain"
+sfx_Die "VO_Buttercup_Death"
+sfx_Doomed "VO_Buttercup_Death"
+vfxlevel_override "VFX_Buttercup"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

@@ -1,0 +1,75 @@
+txt_file "Chars\TemplateCharacters\MinifigTemplate_standard"
+icon_override "Unikitty"
+name UNIKITTY
+moving_icon_start
+cameraOffset x 0.0 y 0.0 z -0.2
+moving_icon_end
+hit_points=1
+stun_die_chance=1.1
+Ability "CharacterWaveReleased"
+Ability "Unikitty_Selectionring"
+Ability "UnikittyTargeting"
+Ability "Movie_HudOverride"
+bolt_type "UniKittyBolt"
+Ability "UnikittyShooting"
+Ability "RainbowSmash"
+Ability "CanUseRainbowSpellIts"
+Ability "UnikittyTransform"
+Ability "ProjectZeusUseMasterBuildIts"
+ability "CanUseSwitches"
+ability "CanUseChromaSwitches"
+Ability "FromLEGOMovie"
+Ability "FromDC"
+Ability "FromLOTR"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "CanUpgradeUnikittyCloud"
+Ability "StandardCharacterTag"
+Ability "AudioReactionDataUnikitty"
+Ability "ContentUnlock" (WorldName=#HUBW_LegoMovie,WorldHint="HINT_UNIKITTY");
+Ability "CanRideRidable_LegoMovieCharacters"
+Ability "UnikittyChainedJumpAttack"
+Ability "UniKittyStreaks"
+Ability "MeleeLEGOrainbow"
+Ability "UniKittySpawnAudio"
+Ability "PreventUnderwaterInteractions"
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 255 136 248 150
+VfxType "VFX_CombatSpang_Pink"
+EndStreakData
+clear_default_items
+define_locator="beam_shoot",0
+sfx_Hurt "UNIKITTY_PAINSMALL"
+sfx_Die "UNIKITTY_DEATH"
+sfx_Doomed "UNIKITTY_DEATH"
+vfxlevel_override "VFX_Unikitty"
+vfxlevel_override "VFX_LEGOshared" EXTRA_SLOT1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             

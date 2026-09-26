@@ -1,0 +1,67 @@
+txt_file "Chars\TemplateCharacters\SmallFigTemplate_standard"
+icon_override "Gimli"
+name GIMLI
+moving_icon_start
+cameraOffset x -0.0 y -0.11 z -0.04
+action "Axe_Idle"
+moving_icon_end
+Ability "GimliTargeting"
+Ability "InteractWithCrackedLegoDefault"
+Ability "CanUseSmallAccess"
+Ability "LOTR_HudOverride"
+Ability "CanUpgradeGimliChariot"
+ability "DefaultSpinAttackAbility"
+Ability "FromLOTR"
+Ability "FromDC"
+Ability "FromLEGOMovie"
+Ability "FromWizardOfOz"
+Ability "FromBTTF"
+Ability "FromPortal"
+Ability "FromDrWho"
+Ability "FromNinjago"
+Ability "FromSimpsons"
+Ability "FromScoobyDoo"
+Ability "FromChima"
+Ability "FromJurassic"
+Ability "FromGhostbusters"
+Ability "FromRetro"
+Ability "FromTeenTitans"
+Ability "FromGhostbusters2016"
+Ability "FromAdventureTime"
+Ability "FromET"
+Ability "FromFantasticBeasts"
+Ability "FromGremlins"
+Ability "FromSonic"
+Ability "FromKnightRider"
+Ability "FromLegoBatman"
+Ability "FromGoonies"
+Ability "FromHarryPotter"
+Ability "FromLegoCity"
+Ability "FromBeetleJuice"
+Ability "FromPowerPuff"
+Ability "FromATeam"
+Ability "FromMissionImpossible"
+Ability "AudioReactionDataGimli"
+Ability "Gimli_Selectionring"
+Ability "StandardCharacterTag"
+Ability "ContentUnlock" (WorldName=#HUBW_LOTR,WorldHint="HINT_GIMLI");
+Ability "GimliShockwave"
+Ability "GimliSpawnAudio"
+Ability "GimliGodRaysCallOut"
+Ability "CharacterWaveReleased"
+Ability "PreventUnderwaterInteractions"
+Ability "SmallfigJakeSuitCamera"
+clear_default_items
+default_item "Gimli_Axe" always_got held
+StreakData
+Life 0.3
+WidthScale 0.7
+MaterialSpecial "Streak_Default"
+Colour 50 50 50 200
+VfxType "VFX_CombatSpang_White"
+EndStreakData
+sfx_Hurt "VO_Gimli_Pain"
+sfx_Die "VO_Gimli_Death"
+sfx_Doomed "VO_Gimli_Death"
+vfxlevel_override "VFX_Gimli"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
