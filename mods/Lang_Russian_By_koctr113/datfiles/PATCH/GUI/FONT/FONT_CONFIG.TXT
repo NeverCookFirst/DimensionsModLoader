@@ -1,0 +1,21 @@
+// if you need to change any of these numbers please let TimG and Moody know, thanks.
+
+// name and scale the font
+default FONT 0.46
+
+// scale the buttons across the board
+buttonscaleup 2.0
+
+// change the baseline used by the buttons to align it with the font
+buttonbaseline 50
+
+icgap= -2.5 
+
+// scale the mech button icons.
+mechiconbuttonscale 0.6
+
+default_inter_character_gap -4.0
+
+TagMatrixYOffset -0.03
+
+LineHeightScale 0.8
