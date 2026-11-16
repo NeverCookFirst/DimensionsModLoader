@@ -116,3 +116,10 @@ trailing newlines or comment characters to hit the exact size.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+## Dimensions Recompiled handoff
+
+I have ended my work on Dimensions Recompiled. This repository is preserved as a read-only reference. The existing source and any release downloads remain available.
+
+- [Final Native GPU release](https://github.com/NeverCookFirst/DimensionsRecomp/releases/tag/v0.2.0)
+- [Project handoff and original build](https://github.com/NeverCookFirst/DimensionsRecomp/blob/main/PROJECT-HANDOFF.md)
